@@ -3,85 +3,95 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mi Inglés — Clases con Euge</title>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<title>Mi Inglés · Clases con Euge</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Syne+Mono&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="app">
+
+<div class="shell">
+
+  <!-- SIDEBAR -->
   <aside class="sidebar" id="sidebar">
-    <div class="sidebar-logo">
-      <div class="logo-icon">🇬🇧</div>
-      <h1>Mi Inglés</h1>
-      <p>Clases con Euge</p>
+    <div class="sb-brand">
+      <div class="sb-flag">🇬🇧</div>
+      <div>
+        <div class="sb-title">Mi Inglés</div>
+        <div class="sb-sub">Clases con Euge</div>
+      </div>
     </div>
-    <nav class="sidebar-nav">
-      <div class="nav-section">Explorar</div>
-      <button class="nav-btn active" data-view="home">
-        <span class="icon">📚</span> Mis clases
-        <span class="nav-count" id="cnt-classes">0</span>
+
+    <nav class="sb-nav">
+      <div class="sb-group">APRENDER</div>
+      <button class="sb-btn active" data-view="home">
+        <span class="sb-icon">📚</span><span>Mis clases</span>
+        <span class="sb-badge" id="cnt-classes">0</span>
       </button>
-      <button class="nav-btn" data-view="vocab">
-        <span class="icon">📖</span> Vocabulario
-        <span class="nav-count" id="cnt-vocab">0</span>
+      <button class="sb-btn" data-view="vocab">
+        <span class="sb-icon">📖</span><span>Vocabulario</span>
+        <span class="sb-badge" id="cnt-vocab">0</span>
       </button>
-      <button class="nav-btn" data-view="grammar">
-        <span class="icon">⚙️</span> Gramática
+      <button class="sb-btn" data-view="tenses">
+        <span class="sb-icon">⏱️</span><span>Tiempos verbales</span>
       </button>
-      <button class="nav-btn" data-view="errors">
-        <span class="icon">✍️</span> Mis errores
-        <span class="nav-count" id="cnt-errors">0</span>
+      <button class="sb-btn" data-view="grammar">
+        <span class="sb-icon">⚙️</span><span>Gramática</span>
       </button>
-      <div class="nav-section">Recursos</div>
-      <button class="nav-btn" data-view="guides">
-        <span class="icon">📋</span> Guías de estudio
+      <button class="sb-btn" data-view="errors">
+        <span class="sb-icon">✍️</span><span>Mis errores</span>
+        <span class="sb-badge" id="cnt-errors">0</span>
       </button>
-      <button class="nav-btn" data-view="phrases">
-        <span class="icon">💬</span> Frases útiles
+
+      <div class="sb-group">RECURSOS</div>
+      <button class="sb-btn" data-view="guides">
+        <span class="sb-icon">📋</span><span>Guías</span>
       </button>
-      <div class="nav-section">Practicar</div>
-      <button class="nav-btn" data-view="practice">
-        <span class="icon">🎯</span> Flashcards
+      <button class="sb-btn" data-view="phrases">
+        <span class="sb-icon">💬</span><span>Frases útiles</span>
       </button>
-      <button class="nav-btn" data-view="quiz">
-        <span class="icon">❓</span> Quiz
+
+      <div class="sb-group">PRACTICAR</div>
+      <button class="sb-btn" data-view="practice">
+        <span class="sb-icon">🃏</span><span>Flashcards</span>
       </button>
-      <div class="nav-section">Clases</div>
-      <div id="sidebar-classes"></div>
+      <button class="sb-btn" data-view="quiz">
+        <span class="sb-icon">🎯</span><span>Quiz</span>
+      </button>
+
+      <div class="sb-group">MIS CLASES</div>
+      <div id="sb-classes"></div>
     </nav>
-    <div class="sidebar-footer">
-      <button class="btn-add" id="btn-add-class">+ Nueva clase</button>
+
+    <div class="sb-footer">
+      <button class="add-btn" id="btn-add">+ Nueva clase</button>
     </div>
   </aside>
 
-  <main class="main">
-    <div class="top-bar">
-      <button class="menu-toggle" id="menu-toggle">☰</button>
-      <h2 id="view-title">Mis clases</h2>
-      <div class="top-actions" id="top-actions"></div>
+  <!-- MAIN -->
+  <main class="main" id="main">
+    <div class="topbar">
+      <button class="menu-btn" id="menu-btn">☰</button>
+      <h1 class="page-title" id="page-title">Mis clases</h1>
+      <div id="top-actions"></div>
     </div>
-    <div class="content" id="main-content"></div>
+    <div class="page-body" id="page-body"></div>
   </main>
 </div>
 
-<!-- MODAL NUEVA CLASE -->
-<div class="modal-overlay" id="modal-overlay">
-  <div class="modal">
-    <div class="modal-header">
-      <h3>Agregar nueva clase</h3>
-      <button class="modal-close" id="modal-close">✕</button>
+<!-- MODAL -->
+<div class="modal-bg" id="modal-bg">
+  <div class="modal-box">
+    <div class="modal-hd">
+      <span class="modal-ttl">Nueva clase</span>
+      <button class="modal-x" id="modal-x">✕</button>
     </div>
-    <div class="form-group">
-      <label>Fecha de la clase</label>
-      <input type="date" id="inp-date">
-    </div>
-    <div class="form-group">
-      <label>Pegá el chat con Euge</label>
-      <textarea id="inp-chat" placeholder="Pegá el texto completo del chat..."></textarea>
-    </div>
-    <div class="modal-actions">
-      <button class="btn" id="btn-cancel">Cancelar</button>
-      <button class="btn primary" id="btn-process">✨ Procesar y guardar</button>
+    <label class="field-lbl">Fecha</label>
+    <input class="field-inp" type="date" id="inp-date">
+    <label class="field-lbl">Pegá el chat con Euge</label>
+    <textarea class="field-inp" id="inp-chat" placeholder="Pegá el texto completo del chat aquí..."></textarea>
+    <div class="modal-ft">
+      <button class="btn-ghost" id="btn-cancel">Cancelar</button>
+      <button class="btn-solid" id="btn-process">✨ Procesar y guardar</button>
     </div>
   </div>
 </div>
