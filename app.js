@@ -246,7 +246,7 @@ function renderErrors(el) {
     <div style="margin-bottom:22px">
       <p style="font-size:13px;color:var(--muted);margin-bottom:12px">Correcciones de clase + tus notas personales.</p>
       <div style="display:flex;gap:8px">
-        <input id="ei" type="text" placeholder="Agregar nota personal..." style="flex:1;padding:9px 13px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-family:'Nunito',sans-serif;font-size:13px;background:var(--paper);color:var(--ink);outline:none">
+        <input id="ei" type="text" placeholder="Agregar nota personal..." style="flex:1;padding:9px 13px;border:1.5px solid var(--border);border-radius:var(--r-sm);font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;background:var(--paper);color:var(--ink);outline:none">
         <button class="btn btn-lime" onclick="addErr()">Agregar</button>
       </div>
     </div>
@@ -318,7 +318,7 @@ function renderPractice(el) {
   }
   const{cards,idx,score,mode}=PS;
   if(idx>=cards.length){
-    el.innerHTML=`<div class="practice-wrap"><div class="score-box"><div class="score-big">✓</div><h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin:12px 0 6px">¡Repasaste todo!</h3><p class="score-sub">${cards.length} tarjetas · ${score} las sabías</p>
+    el.innerHTML=`<div class="practice-wrap"><div class="score-box"><div class="score-big">✓</div><h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;font-weight:800;margin:12px 0 6px">¡Repasaste todo!</h3><p class="score-sub">${cards.length} tarjetas · ${score} las sabías</p>
       <div style="display:flex;gap:10px;justify-content:center;margin-top:22px">
         <button class="btn" onclick="PS=null;renderPractice(document.getElementById('page-body'))">← Volver</button>
         <button class="btn btn-lime" onclick="startFC('${mode}')">Repetir</button>
@@ -359,7 +359,7 @@ function renderQuiz(el) {
   const{cards,idx,score}=PS;
   if(idx>=cards.length){
     const pct=Math.round((score/cards.length)*100);
-    el.innerHTML=`<div class="practice-wrap"><div class="score-box"><div class="score-big">${pct}%</div><h3 style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin:12px 0 6px">${pct>=70?'¡Muy bien!':'Seguí practicando'}</h3><p class="score-sub">Acertaste ${score} de ${cards.length}</p>
+    el.innerHTML=`<div class="practice-wrap"><div class="score-box"><div class="score-big">${pct}%</div><h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:22px;font-weight:800;margin:12px 0 6px">${pct>=70?'¡Muy bien!':'Seguí practicando'}</h3><p class="score-sub">Acertaste ${score} de ${cards.length}</p>
       <div style="display:flex;gap:10px;justify-content:center;margin-top:22px">
         <button class="btn" onclick="PS=null;renderQuiz(document.getElementById('page-body'))">← Volver</button>
         <button class="btn btn-lime" onclick="startQuiz()">Repetir</button>
@@ -391,25 +391,63 @@ async function processClass() {
   const date=document.getElementById('inp-date').value;
   const chat=document.getElementById('inp-chat').value.trim();
   if(!date||!chat){toast('Completá la fecha y el chat');return;}
+  
+  // Check API key
+  const apiKey = localStorage.getItem('anthropic_key') || '';
+  if (!apiKey) {
+    const key = prompt('Para procesar clases automáticamente necesitás tu API key de Anthropic.\nObtené una gratis en console.anthropic.com\n\nPegá tu API key acá:');
+    if (!key) { toast('Cancelado. Sin API key no se puede procesar automáticamente.'); return; }
+    localStorage.setItem('anthropic_key', key.trim());
+    window.ANTHROPIC_KEY = key.trim();
+  } else {
+    window.ANTHROPIC_KEY = apiKey;
+  }
+  
   const btn=document.getElementById('btn-process');
-  btn.textContent='⏳ Procesando...';btn.disabled=true;
+  btn.textContent='⏳ Procesando con IA...';btn.disabled=true;
   try {
     const parsed=await callClaude(chat);
     const nc={id:Date.now(),date,titulo:parsed.titulo||'Clase',vocab:parsed.vocab||[],gramatica:parsed.gramatica||[],correcciones:parsed.correcciones||[],frases:parsed.frases||[]};
-    DB.classes.push(nc);dbSave(DB);closeModal();toast('✓ Clase guardada');render();
-  } catch(e){toast('Error al procesar. Intentá de nuevo.');console.error(e);}
+    DB.classes.push(nc);dbSave(DB);closeModal();toast('✓ Clase guardada correctamente');render();
+  } catch(e){
+    console.error(e);
+    toast('Error al procesar. Verificá tu API key en Configuración.');
+  }
   btn.textContent='✨ Procesar y guardar';btn.disabled=false;
 }
 
 async function callClaude(chatText) {
-  const prompt=`Analizá este chat de clase de inglés. Respondé SOLO con JSON válido, sin texto extra, sin backticks.
-{"titulo":"tema principal en pocas palabras","vocab":[{"en":"","pron":"","es":""}],"gramatica":[{"titulo":"","formula":"","ejemplos":[]}],"correcciones":[{"wrong":"","right":""}],"frases":[{"en":"","es":""}]}
-Si algo no aparece, poné [].
+  const prompt=`Analizá este chat de clase de inglés y extraé el contenido estructurado.
+Respondé SOLO con JSON válido, sin texto extra, sin backticks, sin markdown.
+Formato exacto:
+{"titulo":"tema principal en pocas palabras","vocab":[{"en":"palabra en inglés","pron":"pronunciación IPA o vacío","es":"traducción al español"}],"gramatica":[{"titulo":"nombre de la regla","formula":"la estructura gramatical","ejemplos":["ejemplo 1","ejemplo 2"]}],"correcciones":[{"wrong":"lo que dijo mal el alumno","right":"cómo se dice correctamente"}],"frases":[{"en":"frase en inglés","es":"traducción"}]}
+Si algo no aparece, poné el array vacío []. Incluí pronunciación IPA cuando sea posible.
 CHAT:\n${chatText}`;
-  const res=await fetch("https://api.anthropic.com/v1/messages",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({model:"claude-sonnet-4-20250514",max_tokens:1000,messages:[{role:"user",content:prompt}]})});
-  const data=await res.json();
-  const text=(data.content||[]).map(b=>b.text||'').join('');
-  return JSON.parse(text.replace(/```json|```/g,'').trim());
+  
+  try {
+    const res = await fetch("https://api.anthropic.com/v1/messages", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": window.ANTHROPIC_KEY || "",
+        "anthropic-version": "2023-06-01",
+        "anthropic-dangerous-direct-browser-access": "true"
+      },
+      body: JSON.stringify({
+        model: "claude-sonnet-4-20250514",
+        max_tokens: 2000,
+        messages: [{role:"user", content: prompt}]
+      })
+    });
+    if (!res.ok) throw new Error('API error: ' + res.status);
+    const data = await res.json();
+    const text = (data.content||[]).map(b=>b.text||'').join('');
+    const clean = text.replace(/```json|```/g,'').trim();
+    return JSON.parse(clean);
+  } catch(e) {
+    console.error('Claude API error:', e);
+    throw e;
+  }
 }
 
 // ─── UTILS ────────────────────────────────────────────────────────────────────
