@@ -342,6 +342,122 @@ const INITIAL_CLASSES = [
       {en:"The cat's name is Efraín",es:"El nombre del gato es Efraín"},
       {en:"favourite (UK) = favorite (US)",es:"favorito — dos ortografías correctas"}
     ]
+  },
+  {
+    id:16, date:"2025-06-11", titulo:"Noticias del trabajo, this/that/these/those y hope",
+    vocab:[
+      {en:"expectant",pron:"",es:"expectante"},
+      {en:"announcement",pron:"",es:"anuncio"},
+      {en:"restructuring",pron:"",es:"reestructuración"},
+      {en:"worried",pron:"",es:"preocupado/a"},
+      {en:"positive mindset",pron:"",es:"mentalidad positiva"},
+      {en:"hope",pron:"",es:"esperanza"},
+      {en:"hopefully",pron:"",es:"con suerte / ojalá"},
+      {en:"to think ahead",pron:"",es:"pensar hacia adelante / planificar"},
+      {en:"go ahead",pron:"",es:"adelante"},
+      {en:"these",pron:"/di-is/",es:"estos/estas (cerca, plural)"},
+      {en:"those",pron:"/dóus/",es:"esos/esas (lejos, plural)"},
+      {en:"difficult",pron:"/dífi-klt/",es:"difícil"}
+    ],
+    gramatica:[
+      {titulo:"THIS / THAT / THESE / THOSE",formula:"THIS  → esto/esta (singular, cerca)\nTHAT  → eso/esa (singular, lejos)\nTHESE → estos/estas (plural, cerca)\nTHOSE → esos/esas (plural, lejos)",ejemplos:["I have this photo, look! (cerca, singular)","Do you like that house, the last one in the block? (lejos, singular)","These cats are very beautiful. (cerca, plural)"]}
+    ],
+    correcciones:[
+      {wrong:"I am expectante",right:"I am EXPECTANT"},
+      {wrong:"yesterday announced that notco is sold",right:"Yesterday THERE WAS AN ANNOUNCEMENT ABOUT NOTCO BEING SOLD TO..."},
+      {wrong:"(fue) very fast the comunication",right:"The communication WAS very fast."},
+      {wrong:"and today (brindar) more information",right:"and today THEY WILL BRING more information"},
+      {wrong:"because is restruction very big",right:"because the work positions will be reduced significantly"},
+      {wrong:"i am Little worrie",right:"I am a little worried"},
+      {wrong:"that breaking news is serius",right:"That breaking news is serious"}
+    ],
+    frases:[
+      {en:"I am 100% certain we will be OK.",es:"Estoy 100% seguro de que vamos a estar bien."},
+      {en:"It is so sad.",es:"Es tan triste."},
+      {en:"Before the bad news, we still have hope.",es:"Antes de la mala noticia, todavía tenemos esperanza."},
+      {en:"Hopefully, I will get the job soon.",es:"Con suerte, voy a conseguir el trabajo pronto."}
+    ]
+  },
+  {
+    id:17, date:"2025-06-16", titulo:"Rutinas, libros de Euge y emphasis con DO",
+    vocab:[
+      {en:"sleepy",pron:"",es:"con sueño / dormido"},
+      {en:"third",pron:"",es:"tercero"},
+      {en:"to wake up feeling like working",pron:"",es:"despertarse con ganas de trabajar"},
+      {en:"locked",pron:"",es:"encerrado/a"},
+      {en:"dark story",pron:"",es:"historia oscura"},
+      {en:"bullying",pron:"",es:"acoso escolar"},
+      {en:"secondary (school)",pron:"",es:"secundaria"},
+      {en:"inspired in real life",pron:"",es:"inspirado en la vida real"},
+      {en:"trial",pron:"",es:"juicio"},
+      {en:"domestic violence",pron:"",es:"violencia doméstica"},
+      {en:"psychological",pron:"",es:"psicológico"},
+      {en:"paranormal",pron:"",es:"paranormal"},
+      {en:"reviews",pron:"",es:"reseñas / críticas"},
+      {en:"publisher",pron:"",es:"editorial"},
+      {en:"You're welcome",pron:"",es:"De nada (moderno)"},
+      {en:"Don't mention it",pron:"",es:"De nada (antiguo)"},
+      {en:"blankets",pron:"",es:"mantas"},
+      {en:"slept",pron:"",es:"dormí/dormiste (pasado de sleep)"}
+    ],
+    gramatica:[
+      {titulo:"Emphasis con DO/DOES (énfasis)",formula:"I love you. → neutro\nI DO love you. → énfasis, lo digo en serio\nI do believe you. = I REALLY believe you.",ejemplos:["I DO love you.","I do believe you. (= I really believe you.)"]},
+      {titulo:"have breakfast / lunch / dinner",formula:"have breakfast = desayunar\nhave lunch = almorzar\nhave dinner = cenar",ejemplos:["Do you have breakfast every day?","I first brush my teeth, then I have breakfast."]}
+    ],
+    correcciones:[
+      {wrong:"i am cold and sleep",right:"I am cold and SLEEPY"},
+      {wrong:"what (de que tema trata) you new book?",right:"What topic is your book about?"},
+      {wrong:"your book is inspiration in life real?",right:"Is your book inspired in real life?"},
+      {wrong:"i think you write topic more quait",right:"I think you wrote QUIETER TOPICS"},
+      {wrong:"i firt brash my teeth",right:"I first brush my teeth"}
+    ],
+    frases:[
+      {en:"You wake up feeling like working.",es:"Te despertás con ganas de trabajar."},
+      {en:"Both activities are heaven for me.",es:"Las dos actividades son el cielo para mí."},
+      {en:"I followed the trial and wanted to write about it.",es:"Seguí el juicio y quise escribir sobre eso."},
+      {en:"You are welcome.",es:"De nada. (forma moderna)"},
+      {en:"Don't mention it.",es:"De nada. (forma antigua)"},
+      {en:"What do you do for a living?",es:"¿A qué te dedicás?"}
+    ]
+  },
+  {
+    id:18, date:"2025-06-18", titulo:"Frío extremo, descripciones con adjetivos y Verb To Be completo",
+    vocab:[
+      {en:"freezing cold",pron:"",es:"un frío que cala los huesos"},
+      {en:"blankets",pron:"",es:"mantas"},
+      {en:"air conditioning",pron:"",es:"aire acondicionado"},
+      {en:"a bag of hot water",pron:"",es:"una bolsa de agua caliente"},
+      {en:"an 80-year-old man",pron:"",es:"un hombre de 80 años"},
+      {en:"to incorporate",pron:"",es:"incorporar"},
+      {en:"winter holidays",pron:"",es:"vacaciones de invierno"},
+      {en:"comfortable",pron:"",es:"cómodo"},
+      {en:"as time goes by",pron:"",es:"con el paso del tiempo"},
+      {en:"mountains",pron:"",es:"montañas"},
+      {en:"one hundred / one thousand",pron:"/záusen/",es:"cien / mil"},
+      {en:"lawyer",pron:"",es:"abogado/a"}
+    ],
+    gramatica:[
+      {titulo:"Orden de adjetivos antes del sustantivo (regla importante)",formula:"Lo que describe SIEMPRE va ADELANTE del sustantivo en inglés:\n'I am AN 80-YEAR-OLD sir' (NO 'I am sir 80 years')",ejemplos:["I am an 80-year-old man.","It is very difficult TO incorporate. (no 'incorpotate')"]},
+      {titulo:"Verb To Be — afirmación, negación y pregunta (todas las personas)",formula:"I am / I am not / Am I?\nYou are / You aren't / Are you?\nHe-She-It is / isn't / Is he-she-it?\nWe are / We aren't / Are we?",ejemplos:["I am young. / I am not young. / Am I young?","He is a lawyer. / He isn't a lawyer. / Is he a lawyer?","It is sunny today. / It isn't sunny today. / Is it sunny today?"]},
+      {titulo:"Present Simple — repaso completo con DO/DOES",formula:"I go shopping. / I don't go shopping. / Do you go shopping?\nShe writes books. / She doesn't write books. / Does she write books?",ejemplos:["Do you go shopping sometimes? Yes, I do.","Does she write books? Yes, she does."]}
+    ],
+    correcciones:[
+      {wrong:"and air condition",right:"air CONDITIONING"},
+      {wrong:"blankets and bag hot wáter",right:"blankets and a bag OF hot water"},
+      {wrong:"i am sir 80 years",right:"I am AN 80-YEAR-OLD sir"},
+      {wrong:"is very dificult incorpotate",right:"It is very difficult TO incorporate"},
+      {wrong:"in Winter i dont go to the home",right:"In winter I don't want to go anywhere / go out"},
+      {wrong:"i don't months especific",right:"I don't have specific months. It depends on many things, so I decide as time goes by."},
+      {wrong:"the holidays if my dreams in winter",right:"The holidays of my dreams in winter WOULD BE in Europe in summer"}
+    ],
+    frases:[
+      {en:"We needed two blankets!",es:"¡Necesitamos dos mantas!"},
+      {en:"Winter is coming!",es:"¡Se viene el invierno!"},
+      {en:"It is more comfortable staying home.",es:"Es más cómodo quedarse en casa."},
+      {en:"What was the weather like?",es:"¿Cómo estaba el clima?"},
+      {en:"Which cities did you visit?",es:"¿Qué ciudades visitaste?"},
+      {en:"Is she Italian? Yes, she is.",es:"¿Ella es italiana? Sí."}
+    ]
   }
 ];
 
