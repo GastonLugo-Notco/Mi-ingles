@@ -8,96 +8,75 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <div class="shell">
-
   <!-- SIDEBAR -->
   <aside class="sidebar" id="sidebar">
-    <div class="sb-brand">
-      <div class="sb-flag">🇬🇧</div>
-      <div>
-        <div class="sb-title">Mi Inglés</div>
-        <div class="sb-sub">Clases con Euge</div>
+    <div class="sb-top">
+      <div class="sb-brand">
+        <div class="sb-logo">🇬🇧</div>
+        <div>
+          <div class="sb-title">Mi Inglés</div>
+          <div class="sb-sub">Clases con Euge</div>
+        </div>
       </div>
+      <button class="sb-close" id="sb-close">✕</button>
     </div>
 
     <nav class="sb-nav">
-      <div class="sb-group">APRENDER</div>
-      <button class="sb-btn active" data-view="home">
-        <span class="sb-icon">📚</span><span>Mis clases</span>
-        <span class="sb-badge" id="cnt-classes">0</span>
-      </button>
-      <button class="sb-btn" data-view="vocab">
-        <span class="sb-icon">📖</span><span>Vocabulario</span>
-        <span class="sb-badge" id="cnt-vocab">0</span>
-      </button>
-      <button class="sb-btn" data-view="tenses">
-        <span class="sb-icon">⏱️</span><span>Tiempos verbales</span>
-      </button>
-      <button class="sb-btn" data-view="grammar">
-        <span class="sb-icon">⚙️</span><span>Gramática</span>
-      </button>
-      <button class="sb-btn" data-view="errors">
-        <span class="sb-icon">✍️</span><span>Mis errores</span>
-        <span class="sb-badge" id="cnt-errors">0</span>
-      </button>
+      <div class="sb-section">Aprender</div>
+      <button class="sb-btn active" data-view="home"><span>📚</span>Mis clases<span class="badge" id="cnt-classes">0</span></button>
+      <button class="sb-btn" data-view="vocab"><span>📖</span>Vocabulario<span class="badge" id="cnt-vocab">0</span></button>
+      <button class="sb-btn" data-view="tenses"><span>⏱</span>Tiempos verbales</button>
+      <button class="sb-btn" data-view="grammar"><span>⚙️</span>Gramática</button>
+      <button class="sb-btn" data-view="errors"><span>✍️</span>Mis errores<span class="badge" id="cnt-errors">0</span></button>
 
-      <div class="sb-group">RECURSOS</div>
-      <button class="sb-btn" data-view="guides">
-        <span class="sb-icon">📋</span><span>Guías</span>
-      </button>
-      <button class="sb-btn" data-view="phrases">
-        <span class="sb-icon">💬</span><span>Frases útiles</span>
-      </button>
+      <div class="sb-section">Recursos</div>
+      <button class="sb-btn" data-view="guides"><span>📋</span>Guías de estudio</button>
+      <button class="sb-btn" data-view="phrases"><span>💬</span>Frases útiles</button>
 
-      <div class="sb-group">PRACTICAR</div>
-      <button class="sb-btn" data-view="practice">
-        <span class="sb-icon">🃏</span><span>Flashcards</span>
-      </button>
-      <button class="sb-btn" data-view="quiz">
-        <span class="sb-icon">🎯</span><span>Quiz</span>
-      </button>
+      <div class="sb-section">Practicar</div>
+      <button class="sb-btn" data-view="flashcards"><span>🃏</span>Flashcards</button>
+      <button class="sb-btn" data-view="quiz"><span>🎯</span>Quiz</button>
 
-      <div class="sb-group">MIS CLASES</div>
+      <div class="sb-section">Mis clases</div>
       <div id="sb-classes"></div>
     </nav>
 
     <div class="sb-footer">
-      <button class="add-btn" id="btn-add">+ Nueva clase</button>
+      <button class="btn-new" id="btn-new">+ Nueva clase</button>
     </div>
   </aside>
 
   <!-- MAIN -->
-  <main class="main" id="main">
+  <main class="main">
     <div class="topbar">
-      <button class="menu-btn" id="menu-btn">☰</button>
+      <button class="hamburger" id="hamburger">☰</button>
       <h1 class="page-title" id="page-title">Mis clases</h1>
       <div id="top-actions"></div>
     </div>
-    <div class="page-body" id="page-body"></div>
+    <div class="page" id="page"></div>
   </main>
 </div>
 
 <!-- MODAL -->
 <div class="modal-bg" id="modal-bg">
-  <div class="modal-box">
+  <div class="modal">
     <div class="modal-hd">
-      <span class="modal-ttl">Nueva clase</span>
+      <span class="modal-title">Nueva clase</span>
       <button class="modal-x" id="modal-x">✕</button>
     </div>
-    <label class="field-lbl">Fecha</label>
-    <input class="field-inp" type="date" id="inp-date">
-    <label class="field-lbl">Pegá el chat con Euge</label>
-    <textarea class="field-inp" id="inp-chat" placeholder="Pegá el texto completo del chat aquí..."></textarea>
+    <label class="lbl">Fecha</label>
+    <input class="inp" type="date" id="inp-date">
+    <label class="lbl">Pegá el chat con Euge</label>
+    <textarea class="inp" id="inp-chat" placeholder="Pegá el texto completo del chat aquí..."></textarea>
     <div class="modal-ft">
-      <button class="btn-ghost" id="btn-cancel">Cancelar</button>
-      <button class="btn-solid" id="btn-process">✨ Procesar y guardar</button>
+      <button class="btn ghost" id="btn-cancel">Cancelar</button>
+      <button class="btn solid" id="btn-process">✨ Procesar y guardar</button>
     </div>
   </div>
 </div>
 
 <div class="toast" id="toast"></div>
-
 <script src="data.js"></script>
 <script src="app.js"></script>
 </body>
