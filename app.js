@@ -2,10 +2,18 @@
 const KEY = 'miingles_v5';
 function dbLoad() {
   try { const r = localStorage.getItem(KEY); if (r) return JSON.parse(r); } catch(e) {}
-  return { classes: JSON.parse(JSON.stringify(INITIAL_CLASSES)), errors: [] };
+  return { classes: JSON.parse(JSON.stringify(INITIAL_CLASSES)), errors: [], unknowns: [] };
 }
 function dbSave(db) { localStorage.setItem(KEY, JSON.stringify(db)); }
 let DB = dbLoad();
+if (!DB.unknowns) DB.unknowns = [];
+
+// ─── PRACTICE POOL: vocab + frases ───────────────────────────────────────────
+function getPracticePool() {
+  const vocab = DB.classes.flatMap(c => (c.vocab||[]).map(v => ({...v, type:'vocab'})));
+  const frases = DB.classes.flatMap(c => (c.frases||[]).map(f => ({en:f.en, es:f.es, pron:'', type:'frase'})));
+  return [...vocab, ...frases];
+}
 
 // ─── STATE ────────────────────────────────────────────────────────────────────
 let VIEW = 'home';
@@ -315,33 +323,44 @@ function filterP(){const q=(document.getElementById('ps').value||'').toLowerCase
 
 // ─── FLASHCARDS ───────────────────────────────────────────────────────────────
 function renderFlashcards(pg) {
-  const all = DB.classes.flatMap(c=>c.vocab||[]);
-  if(!all.length) { pg.innerHTML=`<div class="empty"><div class="empty-icon">🃏</div><h3>Sin vocabulario para practicar</h3><p>Cargá al menos una clase primero.</p></div>`; return; }
+  const all = getPracticePool();
+  if(!all.length) { pg.innerHTML=`<div class="empty"><div class="empty-icon">🃏</div><h3>Sin contenido para practicar</h3><p>Cargá al menos una clase primero.</p></div>`; return; }
+
   if(!PS||PS.view!=='fc') {
+    const unknownCount = DB.unknowns.length;
     pg.innerHTML = `<div class="practice-wrap">
-      <p style="font-size:13px;color:var(--ink3);margin-bottom:18px">${all.length} palabras disponibles.</p>
+      <p style="font-size:13px;color:var(--ink3);margin-bottom:18px">${all.length} tarjetas disponibles (vocabulario + frases).</p>
       <div class="mode-grid">
-        <div class="mode-card" onclick="startFC('normal')"><div class="mc-icon">🃏</div><div class="mc-name">Inglés → Español</div><div class="mc-desc">Ves la palabra en inglés y recordás el español.</div></div>
+        <div class="mode-card" onclick="startFC('normal')"><div class="mc-icon">🃏</div><div class="mc-name">Inglés → Español</div><div class="mc-desc">Ves la palabra o frase en inglés y recordás el español.</div></div>
         <div class="mode-card" onclick="startFC('reverse')"><div class="mc-icon">🔄</div><div class="mc-name">Español → Inglés</div><div class="mc-desc">Ves el español y recordás cómo se dice en inglés.</div></div>
-      </div></div>`; return;
+        ${unknownCount>0?`<div class="mode-card" onclick="startFC('unknowns')"><div class="mc-icon">🎯</div><div class="mc-name">No las sabía (${unknownCount})</div><div class="mc-desc">Solo las tarjetas que marcaste como "No la sabía".</div></div>`:''}
+      </div>
+      ${unknownCount>0?`<div style="margin-top:8px;text-align:center"><button class="btn ghost sm" onclick="clearUnknowns()">🗑 Limpiar lista de no sabidas</button></div>`:''}
+    </div>`; return;
   }
+
   const {cards,idx,score,mode} = PS;
   if (idx >= cards.length) {
     pg.innerHTML = `<div class="practice-wrap"><div class="score-wrap">
       <div class="score-big">✓</div>
       <h3 style="font-size:20px;font-weight:800;margin:12px 0 5px">¡Repasaste todo!</h3>
-      <p class="score-sub">${cards.length} tarjetas · ${score} las sabías</p>
-      <div style="display:flex;gap:10px;justify-content:center;margin-top:20px">
+      <p class="score-sub">${cards.length} tarjetas · ${score} las sabías · ${cards.length-score} para repasar</p>
+      ${DB.unknowns.length>0?`<p style="font-size:12px;color:var(--coral);margin-top:8px">📌 Tenés ${DB.unknowns.length} tarjetas guardadas para repasar</p>`:''}
+      <div style="display:flex;gap:10px;justify-content:center;margin-top:20px;flex-wrap:wrap">
         <button class="btn ghost" onclick="PS=null;renderFlashcards(document.getElementById('page'))">← Volver</button>
         <button class="btn teal" onclick="startFC('${mode}')">Repetir</button>
+        ${DB.unknowns.length>0?`<button class="btn" style="background:var(--coral);color:#fff;border:none" onclick="startFC('unknowns')">🎯 Repasar no sabidas (${DB.unknowns.length})</button>`:''}
       </div></div></div>`; return;
   }
+
   const card = cards[idx]; const isR = mode==='reverse';
+  const badge = card.type==='frase' ? '<span style="font-size:10px;background:var(--purple);color:#fff;border-radius:999px;padding:2px 8px;margin-bottom:12px;display:inline-block">EXPRESIÓN</span>' : '';
   pg.innerHTML = `<div class="practice-wrap">
     <div class="prog-bar"><div class="prog-fill" style="width:${(idx/cards.length)*100}%"></div></div>
-    <p class="prog-txt">${idx+1} de ${cards.length}</p>
+    <p class="prog-txt">${idx+1} de ${cards.length} · ✅ ${score} sabidas</p>
     <div class="flashcard" id="fcc" onclick="flipFC()">
       <div class="fc-hint">${isR?'Español → Inglés':'Inglés → Español'}</div>
+      ${badge}
       <div class="fc-word">${isR?card.es:card.en}</div>
       <div class="fc-ans" id="fca">${isR?card.en:card.es}</div>
       ${card.pron?`<div class="fc-pron" id="fcp">${card.pron}</div>`:''}
@@ -355,17 +374,56 @@ function renderFlashcards(pg) {
       <button class="btn ghost sm" onclick="PS=null;renderFlashcards(document.getElementById('page'))">← Salir</button>
     </div></div>`;
 }
-function startFC(mode){const all=DB.classes.flatMap(c=>c.vocab||[]);PS={view:'fc',mode,cards:[...all].sort(()=>Math.random()-.5),idx:0,score:0};renderFlashcards(document.getElementById('page'));}
-function flipFC(){document.getElementById('fca').style.display='block';const p=document.getElementById('fcp');if(p)p.style.display='block';document.getElementById('fcc').querySelector('.fc-tap').style.display='none';document.getElementById('fcact').style.display='flex';}
-function nextFC(k){if(k)PS.score++;PS.idx++;renderFlashcards(document.getElementById('page'));}
+
+function startFC(mode){
+  let cards;
+  if (mode==='unknowns') {
+    cards = DB.unknowns.length>0 ? [...DB.unknowns].sort(()=>Math.random()-.5) : getPracticePool().sort(()=>Math.random()-.5);
+  } else {
+    cards = getPracticePool().sort(()=>Math.random()-.5);
+  }
+  PS={view:'fc',mode,cards,idx:0,score:0};
+  renderFlashcards(document.getElementById('page'));
+}
+
+function flipFC(){
+  document.getElementById('fca').style.display='block';
+  const p=document.getElementById('fcp');if(p)p.style.display='block';
+  document.getElementById('fcc').querySelector('.fc-tap').style.display='none';
+  document.getElementById('fcact').style.display='flex';
+}
+
+function nextFC(knew){
+  if(knew) {
+    PS.score++;
+    // Remove from unknowns if it was there
+    const card = PS.cards[PS.idx];
+    DB.unknowns = DB.unknowns.filter(u => !(u.en===card.en && u.es===card.es));
+  } else {
+    // Add to unknowns if not already there
+    const card = PS.cards[PS.idx];
+    if(!DB.unknowns.find(u => u.en===card.en && u.es===card.es)) {
+      DB.unknowns.push({...card});
+    }
+  }
+  dbSave(DB);
+  PS.idx++;
+  renderFlashcards(document.getElementById('page'));
+}
+
+function clearUnknowns(){
+  DB.unknowns=[];dbSave(DB);
+  renderFlashcards(document.getElementById('page'));
+  toast('Lista de "no sabidas" limpiada');
+}
 
 // ─── QUIZ ─────────────────────────────────────────────────────────────────────
 function renderQuiz(pg) {
-  const all = DB.classes.flatMap(c=>c.vocab||[]);
-  if(all.length<4) { pg.innerHTML=`<div class="empty"><div class="empty-icon">🎯</div><h3>Necesitás al menos 4 palabras</h3></div>`; return; }
+  const all = getPracticePool();
+  if(all.length<4) { pg.innerHTML=`<div class="empty"><div class="empty-icon">🎯</div><h3>Necesitás al menos 4 tarjetas</h3></div>`; return; }
   if(!PS||PS.view!=='quiz') {
     pg.innerHTML=`<div class="practice-wrap">
-      <p style="font-size:13px;color:var(--ink3);margin-bottom:20px">Quiz con ${all.length} palabras. Elegís la traducción correcta entre 4 opciones.</p>
+      <p style="font-size:13px;color:var(--ink3);margin-bottom:20px">Quiz con ${all.length} tarjetas (vocabulario + frases). Elegís la traducción correcta entre 4 opciones.</p>
       <div style="text-align:center"><button class="btn teal" onclick="startQuiz()">▶ Empezar quiz</button></div>
     </div>`; return;
   }
@@ -392,7 +450,7 @@ function renderQuiz(pg) {
       <div class="quiz-opts">${opts.map(o=>`<button class="quiz-opt" onclick="answerQ(this,'${esc(o)}','${esc(card.es)}')">${o}</button>`).join('')}</div>
     </div></div>`;
 }
-function startQuiz(){const all=DB.classes.flatMap(c=>c.vocab||[]);PS={view:'quiz',cards:[...all].sort(()=>Math.random()-.5),idx:0,score:0};renderQuiz(document.getElementById('page'));}
+function startQuiz(){const all=getPracticePool();PS={view:'quiz',cards:[...all].sort(()=>Math.random()-.5),idx:0,score:0};renderQuiz(document.getElementById('page'));}
 function answerQ(btn,chosen,correct){
   document.querySelectorAll('.quiz-opt').forEach(b=>{b.classList.add('disabled');b.onclick=null;if(b.textContent.trim()===correct)b.classList.add('correct');});
   if(chosen===correct){btn.classList.add('correct');PS.score++;}else btn.classList.add('wrong');
