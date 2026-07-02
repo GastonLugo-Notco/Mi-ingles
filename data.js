@@ -510,6 +510,117 @@ const INITIAL_CLASSES = [
       {en:"The potato pie has to be in the oven for an hour.",es:"El pastel de papa tiene que estar en el horno una hora."},
       {en:"A thousand leaves of potato.",es:"Mil hojas de papa (nombre del plato)."}
     ]
+  },
+  {
+    id:20, date:"2025-06-25", titulo:"Despedida de Notco, artículos y descripciones personales",
+    vocab:[
+      {en:"farewell",pron:"",es:"despedida"},
+      {en:"strange / weird",pron:"/guíerd/",es:"raro / extraño"},
+      {en:"cycle",pron:"",es:"ciclo"},
+      {en:"period",pron:"",es:"período / etapa"},
+      {en:"salad",pron:"",es:"ensalada"},
+      {en:"meal",pron:"",es:"comida (del día)"},
+      {en:"dinner",pron:"",es:"cena"},
+      {en:"dessert",pron:"/disért/",es:"postre"},
+      {en:"desert",pron:"/désert/",es:"desierto"},
+      {en:"acid",pron:"",es:"ácido"},
+      {en:"hard working",pron:"",es:"trabajador/a"},
+      {en:"creative",pron:"",es:"creativo/a"},
+      {en:"moody",pron:"",es:"temperamental (un minuto bien, al siguiente enojado)"},
+      {en:"cheerful",pron:"",es:"alegre"},
+      {en:"extrovert / introvert",pron:"",es:"extrovertido / introvertido"},
+      {en:"strangers",pron:"",es:"desconocidos"},
+      {en:"upside down",pron:"",es:"al revés / boca abajo"},
+      {en:"already",pron:"",es:"ya (algo que ya ocurrió)"},
+      {en:"not yet",pron:"",es:"todavía no"},
+      {en:"solved",pron:"",es:"resuelto"}
+    ],
+    gramatica:[
+      {titulo:"Artículos: THE vs A/AN",
+       formula:"THE = el/la/los/las (algo específico, ya conocido)\nA/AN = un/una (algo nuevo, no específico)\n\nThe problem I told you about is already solved. (ese problema específico)\nI saw A nice dog in the garden. (un perro cualquiera)",
+       ejemplos:["The lemon (ese limón específico) / A lemon (un limón cualquiera)","I go to my parents' house. (la casa específica de mis padres)"]},
+      {titulo:"Verb To Be — respuestas cortas afirmativas y negativas",
+       formula:"Is your house small? No, it ISN'T.\nAre you married? No, I'M NOT.\nAre Tom and Nick at home? Yes, they ARE.\nIs the Argentine flag red? No, it ISN'T.\nAre we German? No, we AREN'T.",
+       ejemplos:["Is the lemon acid? Yes, it is.","Are you ready? No, I'm not."]},
+      {titulo:"Present Perfect para experiencias y estados continuos",
+       formula:"I HAVE BEEN feeling for a long time that my cycle is over.\n(algo que empezó en el pasado y sigue hasta hoy)\n\nhave been + verb-ING = he estado...",
+       ejemplos:["I have been feeling that my cycle at Notco is over.","I have been getting ready for it."]}
+    ],
+    correcciones:[
+      {wrong:"i don't sad, but is stranger",right:"I am NOT sad, but IT'S STRANGE."},
+      {wrong:"i feel at time what the finish cycle in notco so i the prepare",right:"I have been feeling for a long time that my period at Notco is over, so I have been getting ready for it."},
+      {wrong:"more less, a finish the clase i go to office",right:"More or less. After the class I go to the office."},
+      {wrong:"more late we do after office de despedida",right:"Later we have a farewell gathering after the office."},
+      {wrong:"i sent information for whatsapp",right:"I will send you the info by WhatsApp."}
+    ],
+    frases:[
+      {en:"Do you have a hard day ahead?",es:"¿Tenés un día difícil por delante?"},
+      {en:"I have been feeling for a long time that my cycle is over.",es:"Hace tiempo que siento que mi ciclo terminó."},
+      {en:"I have been getting ready for it.",es:"Me he estado preparando para eso."},
+      {en:"I am not sad, but it's strange.",es:"No estoy triste, pero es raro."},
+      {en:"The problem I told you about is already solved.",es:"El problema del que te hablé ya está resuelto."},
+      {en:"I saw a nice dog in the garden yesterday.",es:"Ayer vi un lindo perro en el jardín."},
+      {en:"I consider myself a cheerful person.",es:"Me considero una persona alegre."},
+      {en:"I am extrovert with friends and introvert with strangers.",es:"Soy extrovertido con amigos e introvertido con desconocidos."},
+      {en:"Depending on...",es:"Depende de..."},
+      {en:"Not yet.",es:"Todavía no."}
+    ]
+  },
+  {
+    id:21, date:"2025-06-30", titulo:"Presentación del libro, leyenda del hilo rojo y vocabulario narrativo",
+    vocab:[
+      {en:"presentation",pron:"",es:"presentación"},
+      {en:"mess",pron:"",es:"desastre / caos (estado de un lugar)"},
+      {en:"chaos / chaotic",pron:"",es:"caos / caótico"},
+      {en:"writer",pron:"",es:"escritor/a"},
+      {en:"topic",pron:"",es:"tema"},
+      {en:"thread",pron:"",es:"hilo"},
+      {en:"the red thread",pron:"",es:"el hilo rojo"},
+      {en:"legend",pron:"",es:"leyenda"},
+      {en:"invisible",pron:"",es:"invisible"},
+      {en:"connects / links",pron:"",es:"une / conecta"},
+      {en:"tense",pron:"",es:"tensionar / tensar"},
+      {en:"stretch",pron:"",es:"estirar"},
+      {en:"broken",pron:"",es:"roto / cortado"},
+      {en:"fictional",pron:"",es:"ficticio / de ficción"},
+      {en:"publisher",pron:"",es:"editorial"},
+      {en:"flyer",pron:"",es:"volante / folleto"},
+      {en:"remind",pron:"",es:"recordar (a alguien algo)"},
+      {en:"all the contrary",pron:"",es:"todo lo contrario"},
+      {en:"the girl next door",pron:"",es:"la chica de al lado (expresión)"},
+      {en:"one flat is empty",pron:"",es:"un departamento está vacío"}
+    ],
+    gramatica:[
+      {titulo:"Posesivo con apóstrofe — repaso",
+       formula:"my friend's book  →  el libro de mi amigo\nEuge's book  →  el libro de Euge\nI go to my parents' house  →  voy a la casa de mis padres",
+       ejemplos:["What is your friend's book about?","The publisher's office is in Mendoza."]},
+      {titulo:"Contrario: 'all the contrary'",
+       formula:"I don't get angry easily — all the contrary.\n= No me enojo fácilmente — todo lo contrario.\n\nSometimes / All the contrary → expresiones de contraste",
+       ejemplos:["Is she shy? All the contrary, she's very outgoing.","I don't dislike it — all the contrary, I love it."]}
+    ],
+    correcciones:[
+      {wrong:"in saturday a friend presentation a book in my sum of building",right:"On Saturday a friend of mine made his book presentation at my building."},
+      {wrong:"i organation for event",right:"I organized the event."},
+      {wrong:"yesterday i am not in my house, so my house today is caos",right:"Yesterday I was not at home, so my house today is a MESS."},
+      {wrong:"the topic is hilo red",right:"The topic of the book is THE RED THREAD."},
+      {wrong:"the book is inspration in legend the red thread",right:"The book is inspired by the legend of the red thread."},
+      {wrong:"tell his expirience whith love a traves the fiction",right:"It tells his own experience in love through fiction."},
+      {wrong:"you konw legend the red thread?",right:"Do you know the Red Thread legend?"},
+      {wrong:"exist an red theared invisible what link to the peaple for resto the life",right:"The legend says there is an invisible red thread which connects people for the rest of their lives."},
+      {wrong:"i have more information. the Publisher it is in mendoza",right:"I have more information. The publisher IS in Mendoza."}
+    ],
+    frases:[
+      {en:"The legend says there is an invisible red thread which connects people.",es:"La leyenda dice que existe un hilo rojo invisible que une a las personas."},
+      {en:"That thread can tense or stretch, but can never get broken.",es:"Ese hilo puede tensionarse o estirarse, pero nunca puede romperse."},
+      {en:"The book tells his own experience in love through fiction.",es:"El libro cuenta su propia experiencia en el amor a través de la ficción."},
+      {en:"There is a real part and a fictional part.",es:"Hay una parte real y una parte ficticia."},
+      {en:"Remind me please, I don't remember it very well.",es:"Recordámelo por favor, no lo recuerdo muy bien."},
+      {en:"I don't get angry easily — all the contrary.",es:"No me enojo fácilmente — todo lo contrario."},
+      {en:"Sometimes / All the contrary",es:"A veces / Todo lo contrario"},
+      {en:"My hair is chaotic.",es:"Mi pelo está caótico."},
+      {en:"One flat is empty.",es:"Un departamento está vacío."},
+      {en:"The girl next door.",es:"La chica de al lado."}
+    ]
   }
 ];
 
