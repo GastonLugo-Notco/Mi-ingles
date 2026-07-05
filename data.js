@@ -3,10 +3,10 @@ const INITIAL_CLASSES = [
   {
     id:1, date:"2025-04-01", titulo:"Primera toma de contacto — frases básicas",
     vocab:[
-      {en:"Hello / Hi there",pron:"",es:"Hola"},
-      {en:"See you",pron:"",es:"Hasta luego / Nos vemos"},
-      {en:"This is a piece of cake",pron:"",es:"Esto es pan comido (muy fácil)"},
-      {en:"Long time no see",pron:"",es:"Cuánto tiempo sin vernos"},
+      {en:"Hello / Hi there",pron:"/həˈloʊ/ /haɪ ðeər/",es:"Hola"},
+      {en:"See you",pron:"/siː juː/",es:"Hasta luego / Nos vemos"},
+      {en:"This is a piece of cake",pron:"/ðɪs ɪz ə piːs əv keɪk/",es:"Esto es pan comido (muy fácil)"},
+      {en:"Long time no see",pron:"/lɒŋ taɪm nəʊ siː/",es:"Cuánto tiempo sin vernos"},
       {en:"road",pron:"/roud/",es:"camino / calle / ruta"}
     ],
     gramatica:[],
@@ -20,15 +20,15 @@ const INITIAL_CLASSES = [
   {
     id:2, date:"2025-04-06", titulo:"Partes de la casa, estaciones y Present Simple",
     vocab:[
-      {en:"bedroom",pron:"",es:"dormitorio"},{en:"bathroom",pron:"/bázrum/",es:"baño"},
-      {en:"kitchen",pron:"",es:"cocina"},{en:"living room",pron:"",es:"sala de estar"},
-      {en:"dining room",pron:"",es:"comedor"},{en:"balcony",pron:"",es:"balcón"},
-      {en:"garden",pron:"",es:"jardín"},{en:"yard",pron:"/iárd/",es:"patio"},
-      {en:"front yard",pron:"",es:"patio delantero"},{en:"back yard",pron:"",es:"patio trasero"},
+      {en:"bedroom",pron:"/ˈbedrʊm/",es:"dormitorio"},{en:"bathroom",pron:"/bázrum/",es:"baño"},
+      {en:"kitchen",pron:"/ˈkɪtʃɪn/",es:"cocina"},{en:"living room",pron:"/ˈlɪvɪŋ ruːm/",es:"sala de estar"},
+      {en:"dining room",pron:"/ˈdaɪnɪŋ ruːm/",es:"comedor"},{en:"balcony",pron:"/ˈbælkəni/",es:"balcón"},
+      {en:"garden",pron:"/ˈɡɑːrdən/",es:"jardín"},{en:"yard",pron:"/iárd/",es:"patio"},
+      {en:"front yard",pron:"/frʌnt jɑːrd/",es:"patio delantero"},{en:"back yard",pron:"/bæk jɑːrd/",es:"patio trasero"},
       {en:"terrace",pron:"/térris/",es:"terraza"},{en:"garage",pron:"/garásh/ (US)",es:"garaje"},
-      {en:"flat / apartment",pron:"",es:"departamento"},{en:"autumn / fall",pron:"/ódom/",es:"otoño"},
-      {en:"winter",pron:"",es:"invierno"},{en:"spring",pron:"",es:"primavera"},
-      {en:"summer",pron:"",es:"verano"},{en:"seasons",pron:"",es:"estaciones del año"}
+      {en:"flat / apartment",pron:"/flæt/ /əˈpɑːrtmənt/",es:"departamento"},{en:"autumn / fall",pron:"/ódom/",es:"otoño"},
+      {en:"winter",pron:"/ˈwɪntər/",es:"invierno"},{en:"spring",pron:"/sprɪŋ/",es:"primavera"},
+      {en:"summer",pron:"/ˈsʌmər/",es:"verano"},{en:"seasons",pron:"/ˈsiːzənz/",es:"estaciones del año"}
     ],
     gramatica:[{titulo:"Present Simple — preguntas y respuestas cortas",formula:"Do you swim?  →  Yes, I do. / No, I don't.\nDoes she paint?  →  Yes, she does. / No, she doesn't.",ejemplos:["Do you like your flat? — Yes, I do!","Does Euge have two balconies? — Yes, she does."]}],
     correcciones:[],
@@ -37,9 +37,9 @@ const INITIAL_CLASSES = [
   {
     id:3, date:"2025-04-08", titulo:"Pronombres, Verb To Be (presente y pasado)",
     vocab:[
-      {en:"What does ... mean?",pron:"",es:"¿Qué significa ...?"},
-      {en:"mean",pron:"",es:"significar"},
-      {en:"more or less / so so",pron:"",es:"más o menos"},
+      {en:"What does ... mean?",pron:"/wɒt dʌz ... miːn/",es:"¿Qué significa ...?"},
+      {en:"mean",pron:"/miːn/",es:"significar"},
+      {en:"more or less / so so",pron:"/mɔːr ɔːr les/ /səʊ səʊ/",es:"más o menos"},
       {en:"also / too",pron:"/ólso/",es:"también"},
       {en:"this / that / these / those",pron:"/dis/ /dat/ /di-is/ /dóus/",es:"este/ese/estos/esos"}
     ],
@@ -61,15 +61,15 @@ const INITIAL_CLASSES = [
   {
     id:4, date:"2025-04-10", titulo:"Entrenamiento, ubicación y Present Perfect vs Past Simple",
     vocab:[
-      {en:"strength training",pron:"",es:"entrenamiento de fuerza"},
-      {en:"blocks (from my house)",pron:"",es:"cuadras de mi casa"},
-      {en:"husband",pron:"",es:"esposo / marido"},
-      {en:"wonderful",pron:"",es:"maravilloso/a"},
-      {en:"a few",pron:"",es:"algunos pocos"},
-      {en:"a lot of / lots of / tons of",pron:"",es:"un montón de"},
+      {en:"strength training",pron:"/streŋθ ˈtreɪnɪŋ/",es:"entrenamiento de fuerza"},
+      {en:"blocks (from my house)",pron:"/blɒks/",es:"cuadras de mi casa"},
+      {en:"husband",pron:"/ˈhʌzbənd/",es:"esposo / marido"},
+      {en:"wonderful",pron:"/ˈwʌndərfəl/",es:"maravilloso/a"},
+      {en:"a few",pron:"/ə fjuː/",es:"algunos pocos"},
+      {en:"a lot of / lots of / tons of",pron:"/ə lɒt əv/",es:"un montón de"},
       {en:"actually",pron:"/ákshuali/",es:"en realidad (NO actualmente)"},
       {en:"nowadays",pron:"",es:"actualmente / hoy en día"},
-      {en:"coincidence",pron:"",es:"casualidad"},
+      {en:"coincidence",pron:"/koʊˈɪnsɪdəns/",es:"casualidad"},
       {en:"there / here / over there / over here",pron:"",es:"allá / aquí / por allá / por aquí"}
     ],
     gramatica:[{titulo:"Present Perfect vs Past Simple",formula:"I HAVE studied Chinese.  →  sin fecha → efecto presente\nI studied Chinese IN 2011.  →  fecha específica → Past Simple",ejemplos:["I have lived here for 5 years. (y sigo)","She studied in 2011. (año específico)"]}],
@@ -87,10 +87,10 @@ const INITIAL_CLASSES = [
   {
     id:5, date:"2025-04-14", titulo:"Barrio, because/because of y vocabulario cotidiano",
     vocab:[
-      {en:"neighbourhood",pron:"",es:"barrio"},{en:"quiet",pron:"/kuáiet/",es:"tranquilo/a"},
-      {en:"landscape",pron:"",es:"paisaje"},{en:"during",pron:"",es:"durante"},
-      {en:"because",pron:"",es:"porque (+ frase)"},{en:"because of",pron:"",es:"a causa de (+ sustantivo)"},
-      {en:"close to / near",pron:"",es:"cerca de"},{en:"work out",pron:"",es:"hacer ejercicio físico"}
+      {en:"neighbourhood",pron:"/ˈneɪbərhʊd/",es:"barrio"},{en:"quiet",pron:"/kuáiet/",es:"tranquilo/a"},
+      {en:"landscape",pron:"/ˈlændskeɪp/",es:"paisaje"},{en:"during",pron:"/ˈdjʊərɪŋ/",es:"durante"},
+      {en:"because",pron:"/bɪˈkɒz/",es:"porque (+ frase)"},{en:"because of",pron:"/bɪˈkɒz əv/",es:"a causa de (+ sustantivo)"},
+      {en:"close to / near",pron:"/kloʊs tuː/ /nɪər/",es:"cerca de"},{en:"work out",pron:"/wɜːrk aʊt/",es:"hacer ejercicio físico"}
     ],
     gramatica:[{titulo:"BECAUSE vs BECAUSE OF",formula:"because + frase completa\nbecause of + sustantivo",ejemplos:["She's tired because she worked.","She's tired because of work."]}],
     correcciones:[
@@ -107,12 +107,12 @@ const INITIAL_CLASSES = [
     id:6, date:"2025-04-17", titulo:"Viaje a Perú, formas de futuro y comparaciones",
     vocab:[
       {en:"neither",pron:"/níder/",es:"yo tampoco (Me neither)"},
-      {en:"flavourful / tasty",pron:"",es:"sabroso"},
-      {en:"vegetarian",pron:"",es:"vegetariano/a"},
-      {en:"similar to",pron:"",es:"similar a"},{en:"different from",pron:"",es:"diferente de"},
-      {en:"slang",pron:"",es:"lunfardo / jerga"},
+      {en:"flavourful / tasty",pron:"/ˈfleɪvərfəl/ /ˈteɪsti/",es:"sabroso"},
+      {en:"vegetarian",pron:"/ˌvedʒɪˈteəriən/",es:"vegetariano/a"},
+      {en:"similar to",pron:"/ˈsɪmɪlər tuː/",es:"similar a"},{en:"different from",pron:"/ˈdɪfərənt frɒm/",es:"diferente de"},
+      {en:"slang",pron:"/slæŋ/",es:"lunfardo / jerga"},
       {en:"busy",pron:"/bísi/",es:"ocupado/a"},{en:"useful",pron:"/iús-ful/",es:"útil"},
-      {en:"I have no idea / No clue",pron:"",es:"No tengo idea"}
+      {en:"I have no idea / No clue",pron:"/aɪ hæv nəʊ aɪˈdɪə/",es:"No tengo idea"}
     ],
     gramatica:[{titulo:"Futuro: Will vs Going to vs Present Continuous",formula:"WILL        → decisión en el momento / predicción sin evidencia\nGOING TO    → plan ya decidido / predicción con evidencia\nPRES. CONT. → agenda ya confirmada (hora y lugar)",ejemplos:["'Someone at the door' → 'I'll go and see.' (will ahora)","I'm going to travel to Peru. (plan previo)","I'm seeing my friend tomorrow. (turno arreglado)"]}],
     correcciones:[
@@ -129,17 +129,17 @@ const INITIAL_CLASSES = [
   {
     id:7, date:"2025-05-11", titulo:"Clima, bored vs boring, escaleras y comidas",
     vocab:[
-      {en:"bored",pron:"",es:"aburrido (cómo ME siento)"},
-      {en:"boring",pron:"",es:"aburrido (cómo ES algo/alguien)"},
-      {en:"sunbathing",pron:"",es:"tomar sol"},
-      {en:"downstairs / upstairs",pron:"",es:"abajo / arriba (de la escalera)"},
+      {en:"bored",pron:"/bɔːrd/",es:"aburrido (cómo ME siento)"},
+      {en:"boring",pron:"/ˈbɔːrɪŋ/",es:"aburrido (cómo ES algo/alguien)"},
+      {en:"sunbathing",pron:"/ˈsʌnbeɪðɪŋ/",es:"tomar sol"},
+      {en:"downstairs / upstairs",pron:"/ˌdaʊnˈsteərz/ /ˌʌpˈsteərz/",es:"abajo / arriba (de la escalera)"},
       {en:"stairs",pron:"/sters/",es:"escalera(s)"},
       {en:"main",pron:"/méin/",es:"principal"},
       {en:"meat",pron:"/mit/",es:"carne"},{en:"meet",pron:"/mit/",es:"reunirse"},
       {en:"meal",pron:"/mil/",es:"comida del día (desayuno, almuerzo, cena)"},
-      {en:"food",pron:"",es:"comida (los productos)"},
-      {en:"dish",pron:"",es:"plato (de comida)"},{en:"plate",pron:"",es:"plato (el objeto)"},
-      {en:"in comparison with",pron:"",es:"en comparación con"}
+      {en:"food",pron:"/fuːd/",es:"comida (los productos)"},
+      {en:"dish",pron:"/dɪʃ/",es:"plato (de comida)"},{en:"plate",pron:"/pleɪt/",es:"plato (el objeto)"},
+      {en:"in comparison with",pron:"/ɪn kəmˈpærɪsən wɪð/",es:"en comparación con"}
     ],
     gramatica:[{titulo:"BORED vs BORING",formula:"BORED   = cómo te SENTÍS vos\nBORING  = cómo ES algo o alguien",ejemplos:["I feel bored in math classes.","Math is boring!"]}],
     correcciones:[
@@ -155,13 +155,13 @@ const INITIAL_CLASSES = [
   {
     id:8, date:"2025-05-14", titulo:"Deportes, rutinas y Present Simple completo",
     vocab:[
-      {en:"lungs",pron:"",es:"pulmones"},{en:"brave",pron:"",es:"valiente"},
-      {en:"have breakfast",pron:"",es:"desayunar"},{en:"breakfast",pron:"",es:"desayuno"},
-      {en:"have lunch",pron:"",es:"almorzar"},{en:"lunch",pron:"",es:"almuerzo"},
-      {en:"have dinner",pron:"",es:"cenar"},{en:"dinner",pron:"",es:"cena"},
-      {en:"snack",pron:"",es:"merienda"},{en:"teeth",pron:"/tiz/",es:"dientes"},
-      {en:"sweet",pron:"",es:"dulce"},{en:"salty",pron:"",es:"salado"},
-      {en:"bitter",pron:"",es:"amargo"},{en:"bittersweet",pron:"",es:"agridulce"}
+      {en:"lungs",pron:"/lʌŋz/",es:"pulmones"},{en:"brave",pron:"/breɪv/",es:"valiente"},
+      {en:"have breakfast",pron:"/hæv ˈbrekfəst/",es:"desayunar"},{en:"breakfast",pron:"/ˈbrekfəst/",es:"desayuno"},
+      {en:"have lunch",pron:"/hæv lʌntʃ/",es:"almorzar"},{en:"lunch",pron:"/lʌntʃ/",es:"almuerzo"},
+      {en:"have dinner",pron:"/hæv ˈdɪnər/",es:"cenar"},{en:"dinner",pron:"/ˈdɪnər/",es:"cena"},
+      {en:"snack",pron:"/snæk/",es:"merienda"},{en:"teeth",pron:"/tiz/",es:"dientes"},
+      {en:"sweet",pron:"/swiːt/",es:"dulce"},{en:"salty",pron:"/ˈsɔːlti/",es:"salado"},
+      {en:"bitter",pron:"/ˈbɪtər/",es:"amargo"},{en:"bittersweet",pron:"/ˌbɪtərˈswiːt/",es:"agridulce"}
     ],
     gramatica:[{titulo:"Present Simple — estructura completa",formula:"(+) I go. / She travelS.\n(−) I DON'T go. / He DOESN'T travel.\n(?) DO I go? / DOES he travel?",ejemplos:["You speak German. / You don't speak German. / Do you speak German?","It rains a lot. / It doesn't rain. / Does it rain?"]}],
     correcciones:[
@@ -176,10 +176,10 @@ const INITIAL_CLASSES = [
   {
     id:9, date:"2025-05-18", titulo:"Rutina matutina y WHAT como sujeto",
     vocab:[
-      {en:"brush my teeth",pron:"",es:"cepillarme los dientes"},
-      {en:"wake up / woke up",pron:"",es:"despertarse / me desperté"},
-      {en:"what makes your day",pron:"",es:"qué te alegra el día"},
-      {en:"passion / passions",pron:"",es:"pasión / pasiones"}
+      {en:"brush my teeth",pron:"/brʌʃ maɪ tiːθ/",es:"cepillarme los dientes"},
+      {en:"wake up / woke up",pron:"/weɪk ʌp/ /woʊk ʌp/",es:"despertarse / me desperté"},
+      {en:"what makes your day",pron:"/wɒt meɪks jɔːr deɪ/",es:"qué te alegra el día"},
+      {en:"passion / passions",pron:"/ˈpæʃən/ /ˈpæʃənz/",es:"pasión / pasiones"}
     ],
     gramatica:[{titulo:"WHAT como sujeto (sin auxiliar)",formula:"WHAT + VERB + objeto  (WHAT es el sujeto = no va auxiliar)\nWHAT MAKES your day?\nWHAT HAPPENED?",ejemplos:["What makes you happy? (NO 'What does make...')","What happened last night?"]}],
     correcciones:[
@@ -194,11 +194,11 @@ const INITIAL_CLASSES = [
   {
     id:10, date:"2025-05-21", titulo:"Rutinas, sleep, ansiedad y vocabulario cotidiano",
     vocab:[
-      {en:"totally agree",pron:"",es:"totalmente de acuerdo"},
+      {en:"totally agree",pron:"/ˈtoʊtəli əˈɡriː/",es:"totalmente de acuerdo"},
       {en:"anxious",pron:"/án-shus/",es:"ansioso/a"},
       {en:"anxiety",pron:"/an-sáie-ti/",es:"ansiedad"},
-      {en:"You are right / wrong",pron:"",es:"Tenés razón / Estás equivocado"},
-      {en:"per night / per day",pron:"",es:"por noche / por día"}
+      {en:"You are right / wrong",pron:"/juː ɑːr raɪt/ /rɒŋ/",es:"Tenés razón / Estás equivocado"},
+      {en:"per night / per day",pron:"/pər naɪt/ /pər deɪ/",es:"por noche / por día"}
     ],
     gramatica:[{titulo:"ACTUALLY vs NOWADAYS",formula:"actually   = en realidad (NO actualmente)\nnowadays   = actualmente / hoy en día",ejemplos:["Actually, I don't like winter. (En realidad...)","Nowadays everyone uses smartphones. (Hoy en día...)"]}],
     correcciones:[
@@ -214,12 +214,12 @@ const INITIAL_CLASSES = [
   {
     id:11, date:"2025-05-25", titulo:"Fórmula 1, sueños y motivación",
     vocab:[
-      {en:"pilot / driver",pron:"",es:"piloto"},
-      {en:"race",pron:"",es:"carrera"},
-      {en:"effort",pron:"",es:"esfuerzo"},
-      {en:"make a dream come true",pron:"",es:"hacer realidad un sueño"},
-      {en:"sleepy / kind of sleepy",pron:"",es:"con sueño / medio con sueño"},
-      {en:"several",pron:"",es:"varios / muchos"},
+      {en:"pilot / driver",pron:"/ˈpaɪlət/ /ˈdraɪvər/",es:"piloto"},
+      {en:"race",pron:"/reɪs/",es:"carrera"},
+      {en:"effort",pron:"/ˈefərt/",es:"esfuerzo"},
+      {en:"make a dream come true",pron:"/meɪk ə driːm kʌm truː/",es:"hacer realidad un sueño"},
+      {en:"sleepy / kind of sleepy",pron:"/ˈsliːpi/",es:"con sueño / medio con sueño"},
+      {en:"several",pron:"/ˈsevrəl/",es:"varios / muchos"},
       {en:"again",pron:"/egén/",es:"otra vez / de nuevo"}
     ],
     gramatica:[],
@@ -237,10 +237,10 @@ const INITIAL_CLASSES = [
   {
     id:12, date:"2025-06-02", titulo:"Trabajo, emprendimiento y Present Continuous",
     vocab:[
-      {en:"entrepreneur",pron:"",es:"emprendedor"},
-      {en:"gastronomic project",pron:"",es:"proyecto gastronómico"},
-      {en:"know the ropes",pron:"",es:"conocer el trabajo / saber cómo funciona"},
-      {en:"I am upset",pron:"",es:"estoy molesto/a"},
+      {en:"entrepreneur",pron:"/ˌɒntrəprəˈnɜːr/",es:"emprendedor"},
+      {en:"gastronomic project",pron:"/ˌɡæstrəˈnɒmɪk ˈprɒdʒekt/",es:"proyecto gastronómico"},
+      {en:"know the ropes",pron:"/nəʊ ðə roʊps/",es:"conocer el trabajo / saber cómo funciona"},
+      {en:"I am upset",pron:"/aɪ æm ʌpˈset/",es:"estoy molesto/a"},
       {en:"woke up",pron:"",es:"me desperté (past de wake up)"}
     ],
     gramatica:[{titulo:"Present Continuous — uso",formula:"AM / IS / ARE + verb + ING\nI AM working now. / We ARE having a class.",ejemplos:["I am learning English with Euge.","He is speaking in English right now."]}],
@@ -257,10 +257,10 @@ const INITIAL_CLASSES = [
   {
     id:13, date:"2025-06-03", titulo:"Tecnología, trabajo de Fer y adjetivos antes del sustantivo",
     vocab:[
-      {en:"afraid",pron:"",es:"con miedo (I'm afraid = tengo miedo)"},
-      {en:"light technician",pron:"",es:"técnico de luces"},
-      {en:"on tour",pron:"",es:"de gira"},
-      {en:"talented",pron:"",es:"talentoso/a"},
+      {en:"afraid",pron:"/əˈfreɪd/",es:"con miedo (I'm afraid = tengo miedo)"},
+      {en:"light technician",pron:"/laɪt tekˈnɪʃən/",es:"técnico de luces"},
+      {en:"on tour",pron:"/ɒn tʊər/",es:"de gira"},
+      {en:"talented",pron:"/ˈtæləntɪd/",es:"talentoso/a"},
       {en:"come / came",pron:"/kam/ /kéim/",es:"venir / vine-vino"},
       {en:"ate",pron:"/éit/",es:"comí/comió (past de eat)"}
     ],
@@ -279,12 +279,12 @@ const INITIAL_CLASSES = [
   {
     id:14, date:"2025-06-04", titulo:"Present Perfect completo, HAVE TO y preposiciones",
     vocab:[
-      {en:"humid / humidity",pron:"",es:"húmedo / humedad"},
+      {en:"humid / humidity",pron:"/ˈhjuːmɪd/ /hjuːˈmɪdɪti/",es:"húmedo / humedad"},
       {en:"behind",pron:"/bijáind/",es:"detrás"},
-      {en:"depends on",pron:"",es:"depende de"},
+      {en:"depends on",pron:"/dɪˈpendz ɒn/",es:"depende de"},
       {en:"cough",pron:"/kaf/",es:"tos / toser"},
-      {en:"have to",pron:"",es:"tener que / deber"},
-      {en:"still / yet",pron:"",es:"todavía / ya (en preguntas)"}
+      {en:"have to",pron:"/ˈhæv tuː/",es:"tener que / deber"},
+      {en:"still / yet",pron:"/stɪl/ /jet/",es:"todavía / ya (en preguntas)"}
     ],
     gramatica:[
       {titulo:"Present Perfect Simple — estructura completa",formula:"(+) I HAVE worked.  /  She HAS worked.\n(?) HAVE you worked?  /  HAS she worked?\n(−) I HAVEN'T worked.  /  She HASN'T worked.\n\nPalabras clave: ever · never · already · yet · just · for · since",ejemplos:["Have you ever watched F1 races? No, I haven't.","I have studied English with Euge for two months."]},
@@ -304,17 +304,17 @@ const INITIAL_CLASSES = [
   {
     id:15, date:"2025-06-08", titulo:"Londres, clima, Present Perfect con FOR y posesivo con apóstrofe",
     vocab:[
-      {en:"sunlight",pron:"",es:"luz del sol"},
-      {en:"mood",pron:"",es:"estado de ánimo"},
-      {en:"influence / affect",pron:"",es:"influir / afectar"},
-      {en:"degree",pron:"",es:"grado (temperatura)"},
-      {en:"30 degrees",pron:"",es:"30 grados"},
-      {en:"kitten",pron:"",es:"gato bebé"},
-      {en:"puppy",pron:"",es:"perro bebé"},
-      {en:"favourite / favorite",pron:"",es:"favorito (UK/US)"},
-      {en:"flat (British) / apartment (American)",pron:"",es:"departamento"},
-      {en:"rooms",pron:"",es:"habitaciones / ambientes"},
-      {en:"not for all the money in the world",pron:"",es:"ni por toda la plata del mundo"}
+      {en:"sunlight",pron:"/ˈsʌnlaɪt/",es:"luz del sol"},
+      {en:"mood",pron:"/muːd/",es:"estado de ánimo"},
+      {en:"influence / affect",pron:"/ˈɪnfluəns/ /əˈfekt/",es:"influir / afectar"},
+      {en:"degree",pron:"/dɪˈɡriː/",es:"grado (temperatura)"},
+      {en:"30 degrees",pron:"/θɜːrti dɪˈɡriːz/",es:"30 grados"},
+      {en:"kitten",pron:"/ˈkɪtən/",es:"gato bebé"},
+      {en:"puppy",pron:"/ˈpʌpi/",es:"perro bebé"},
+      {en:"favourite / favorite",pron:"/ˈfeɪvərɪt/",es:"favorito (UK/US)"},
+      {en:"flat (British) / apartment (American)",pron:"/flæt/ /əˈpɑːrtmənt/",es:"departamento"},
+      {en:"rooms",pron:"/ruːmz/",es:"habitaciones / ambientes"},
+      {en:"not for all the money in the world",pron:"/nɒt fər ɔːl ðə ˈmʌni/",es:"ni por toda la plata del mundo"}
     ],
     gramatica:[
       {titulo:"Present Perfect con FOR — duración hasta ahora",formula:"I HAVEN'T SEEN the sunlight FOR many days.\n(algo del pasado que continúa hasta hoy)\n\n⚠ El verbo siguiente va en 3ra columna (participio):\nsee → saw → SEEN\nhave → had → HAD\ngo → went → GONE",ejemplos:["I haven't seen the sunlight for many days.","I have lived here for 5 years. (y sigo viviendo)"]},
@@ -346,15 +346,15 @@ const INITIAL_CLASSES = [
   {
     id:16, date:"2025-06-11", titulo:"Noticias del trabajo, this/that/these/those y hope",
     vocab:[
-      {en:"expectant",pron:"",es:"expectante"},
-      {en:"announcement",pron:"",es:"anuncio"},
-      {en:"restructuring",pron:"",es:"reestructuración"},
-      {en:"worried",pron:"",es:"preocupado/a"},
-      {en:"positive mindset",pron:"",es:"mentalidad positiva"},
-      {en:"hope",pron:"",es:"esperanza"},
-      {en:"hopefully",pron:"",es:"con suerte / ojalá"},
-      {en:"to think ahead",pron:"",es:"pensar hacia adelante / planificar"},
-      {en:"go ahead",pron:"",es:"adelante"},
+      {en:"expectant",pron:"/ɪkˈspektənt/",es:"expectante"},
+      {en:"announcement",pron:"/əˈnaʊnsmənt/",es:"anuncio"},
+      {en:"restructuring",pron:"/riːˈstrʌktʃərɪŋ/",es:"reestructuración"},
+      {en:"worried",pron:"/ˈwʌrid/",es:"preocupado/a"},
+      {en:"positive mindset",pron:"/ˈpɒzɪtɪv ˈmaɪndset/",es:"mentalidad positiva"},
+      {en:"hope",pron:"/hoʊp/",es:"esperanza"},
+      {en:"hopefully",pron:"/ˈhoʊpfəli/",es:"con suerte / ojalá"},
+      {en:"to think ahead",pron:"/tuː θɪŋk əˈhed/",es:"pensar hacia adelante / planificar"},
+      {en:"go ahead",pron:"/ɡoʊ əˈhed/",es:"adelante"},
       {en:"these",pron:"/di-is/",es:"estos/estas (cerca, plural)"},
       {en:"those",pron:"/dóus/",es:"esos/esas (lejos, plural)"},
       {en:"difficult",pron:"/dífi-klt/",es:"difícil"}
@@ -382,21 +382,21 @@ const INITIAL_CLASSES = [
     id:17, date:"2025-06-16", titulo:"Rutinas, libros de Euge y emphasis con DO",
     vocab:[
       {en:"sleepy",pron:"",es:"con sueño / dormido"},
-      {en:"third",pron:"",es:"tercero"},
-      {en:"to wake up feeling like working",pron:"",es:"despertarse con ganas de trabajar"},
-      {en:"locked",pron:"",es:"encerrado/a"},
-      {en:"dark story",pron:"",es:"historia oscura"},
-      {en:"bullying",pron:"",es:"acoso escolar"},
-      {en:"secondary (school)",pron:"",es:"secundaria"},
-      {en:"inspired in real life",pron:"",es:"inspirado en la vida real"},
-      {en:"trial",pron:"",es:"juicio"},
-      {en:"domestic violence",pron:"",es:"violencia doméstica"},
+      {en:"third",pron:"/θɜːrd/",es:"tercero"},
+      {en:"to wake up feeling like working",pron:"/tuː weɪk ʌp ˈfiːlɪŋ laɪk ˈwɜːrkɪŋ/",es:"despertarse con ganas de trabajar"},
+      {en:"locked",pron:"/lɒkt/",es:"encerrado/a"},
+      {en:"dark story",pron:"/dɑːrk ˈstɔːri/",es:"historia oscura"},
+      {en:"bullying",pron:"/ˈbʊliɪŋ/",es:"acoso escolar"},
+      {en:"secondary (school)",pron:"/ˈsekənderi/",es:"secundaria"},
+      {en:"inspired in real life",pron:"/ɪnˈspaɪərd ɪn riːl laɪf/",es:"inspirado en la vida real"},
+      {en:"trial",pron:"/ˈtraɪəl/",es:"juicio"},
+      {en:"domestic violence",pron:"/dəˈmestɪk ˈvaɪələns/",es:"violencia doméstica"},
       {en:"psychological",pron:"",es:"psicológico"},
       {en:"paranormal",pron:"",es:"paranormal"},
       {en:"reviews",pron:"",es:"reseñas / críticas"},
-      {en:"publisher",pron:"",es:"editorial"},
-      {en:"You're welcome",pron:"",es:"De nada (moderno)"},
-      {en:"Don't mention it",pron:"",es:"De nada (antiguo)"},
+      {en:"publisher",pron:"/ˈpʌblɪʃər/",es:"editorial"},
+      {en:"You're welcome",pron:"/jɔːr ˈwelkəm/",es:"De nada (moderno)"},
+      {en:"Don't mention it",pron:"/doʊnt ˈmenʃən ɪt/",es:"De nada (antiguo)"},
       {en:"blankets",pron:"",es:"mantas"},
       {en:"slept",pron:"",es:"dormí/dormiste (pasado de sleep)"}
     ],
@@ -423,18 +423,18 @@ const INITIAL_CLASSES = [
   {
     id:18, date:"2025-06-18", titulo:"Frío extremo, descripciones con adjetivos y Verb To Be completo",
     vocab:[
-      {en:"freezing cold",pron:"",es:"un frío que cala los huesos"},
+      {en:"freezing cold",pron:"/ˈfriːzɪŋ koʊld/",es:"un frío que cala los huesos"},
       {en:"blankets",pron:"",es:"mantas"},
       {en:"air conditioning",pron:"",es:"aire acondicionado"},
-      {en:"a bag of hot water",pron:"",es:"una bolsa de agua caliente"},
-      {en:"an 80-year-old man",pron:"",es:"un hombre de 80 años"},
-      {en:"to incorporate",pron:"",es:"incorporar"},
-      {en:"winter holidays",pron:"",es:"vacaciones de invierno"},
-      {en:"comfortable",pron:"",es:"cómodo"},
-      {en:"as time goes by",pron:"",es:"con el paso del tiempo"},
-      {en:"mountains",pron:"",es:"montañas"},
+      {en:"a bag of hot water",pron:"/ə bæɡ əv hɒt ˈwɔːtər/",es:"una bolsa de agua caliente"},
+      {en:"an 80-year-old man",pron:"/ən ˈeɪti jɪər oʊld mæn/",es:"un hombre de 80 años"},
+      {en:"to incorporate",pron:"/tuː ɪnˈkɔːrpəreɪt/",es:"incorporar"},
+      {en:"winter holidays",pron:"/ˈwɪntər ˈhɒlɪdeɪz/",es:"vacaciones de invierno"},
+      {en:"comfortable",pron:"/ˈkʌmftəbəl/",es:"cómodo"},
+      {en:"as time goes by",pron:"/æz taɪm ɡoʊz baɪ/",es:"con el paso del tiempo"},
+      {en:"mountains",pron:"/ˈmaʊntənz/",es:"montañas"},
       {en:"one hundred / one thousand",pron:"/záusen/",es:"cien / mil"},
-      {en:"lawyer",pron:"",es:"abogado/a"}
+      {en:"lawyer",pron:"/ˈlɔːjər/",es:"abogado/a"}
     ],
     gramatica:[
       {titulo:"Orden de adjetivos antes del sustantivo (regla importante)",formula:"Lo que describe SIEMPRE va ADELANTE del sustantivo en inglés:\n'I am AN 80-YEAR-OLD sir' (NO 'I am sir 80 years')",ejemplos:["I am an 80-year-old man.","It is very difficult TO incorporate. (no 'incorpotate')"]},
@@ -462,23 +462,23 @@ const INITIAL_CLASSES = [
   {
     id:19, date:"2025-06-24", titulo:"Emojis, trabajo de Notco, partido y palabras expresivas",
     vocab:[
-      {en:"darkness",pron:"",es:"oscuridad"},
-      {en:"common",pron:"",es:"común / normal"},
-      {en:"weird",pron:"",es:"raro / extraño"},
+      {en:"darkness",pron:"/ˈdɑːrknəs/",es:"oscuridad"},
+      {en:"common",pron:"/ˈkɒmən/",es:"común / normal"},
+      {en:"weird",pron:"/wɪərd/",es:"raro / extraño"},
       {en:"still",pron:"",es:"todavía / aún"},
-      {en:"waiting",pron:"",es:"esperando (NOT 'londing')"},
-      {en:"looking for a job",pron:"",es:"buscando trabajo"},
-      {en:"amazing",pron:"",es:"increíble / asombroso"},
-      {en:"astonishing",pron:"",es:"asombroso"},
-      {en:"stunning",pron:"",es:"impresionante"},
-      {en:"awesome",pron:"",es:"genial / increíble"},
-      {en:"enthusiastic",pron:"",es:"entusiasmado/a"},
-      {en:"relaxing",pron:"",es:"relajante (adjetivo)"},
-      {en:"oven / stove",pron:"",es:"horno"},
-      {en:"leaf",pron:"",es:"hoja (de árbol o planta)"},
-      {en:"leaves",pron:"",es:"hojas (plural de leaf)"},
-      {en:"priorities",pron:"",es:"prioridades"},
-      {en:"enjoy it",pron:"",es:"disfrutalo"}
+      {en:"waiting",pron:"/ˈweɪtɪŋ/",es:"esperando (NOT 'londing')"},
+      {en:"looking for a job",pron:"/ˈlʊkɪŋ fər ə dʒɒb/",es:"buscando trabajo"},
+      {en:"amazing",pron:"/əˈmeɪzɪŋ/",es:"increíble / asombroso"},
+      {en:"astonishing",pron:"/əˈstɒnɪʃɪŋ/",es:"asombroso"},
+      {en:"stunning",pron:"/ˈstʌnɪŋ/",es:"impresionante"},
+      {en:"awesome",pron:"/ˈɔːsəm/",es:"genial / increíble"},
+      {en:"enthusiastic",pron:"/ɪnˌθjuːziˈæstɪk/",es:"entusiasmado/a"},
+      {en:"relaxing",pron:"/rɪˈlæksɪŋ/",es:"relajante (adjetivo)"},
+      {en:"oven / stove",pron:"/ˈʌvən/ /stoʊv/",es:"horno"},
+      {en:"leaf",pron:"/liːf/",es:"hoja (de árbol o planta)"},
+      {en:"leaves",pron:"/liːvz/",es:"hojas (plural de leaf)"},
+      {en:"priorities",pron:"/praɪˈɒrɪtiz/",es:"prioridades"},
+      {en:"enjoy it",pron:"/ɪnˈdʒɔɪ ɪt/",es:"disfrutalo"}
     ],
     gramatica:[
       {titulo:"Gerundio después de preposición o verbo",
@@ -514,26 +514,26 @@ const INITIAL_CLASSES = [
   {
     id:20, date:"2025-06-25", titulo:"Despedida de Notco, artículos y descripciones personales",
     vocab:[
-      {en:"farewell",pron:"",es:"despedida"},
+      {en:"farewell",pron:"/ˌfeərˈwel/",es:"despedida"},
       {en:"strange / weird",pron:"/guíerd/",es:"raro / extraño"},
-      {en:"cycle",pron:"",es:"ciclo"},
-      {en:"period",pron:"",es:"período / etapa"},
-      {en:"salad",pron:"",es:"ensalada"},
-      {en:"meal",pron:"",es:"comida (del día)"},
-      {en:"dinner",pron:"",es:"cena"},
+      {en:"cycle",pron:"/ˈsaɪkəl/",es:"ciclo"},
+      {en:"period",pron:"/ˈpɪəriəd/",es:"período / etapa"},
+      {en:"salad",pron:"/ˈsæləd/",es:"ensalada"},
+      {en:"meal",pron:"/miːl/",es:"comida (del día)"},
+      {en:"dinner",pron:"/ˈdɪnər/",es:"cena"},
       {en:"dessert",pron:"/disért/",es:"postre"},
       {en:"desert",pron:"/désert/",es:"desierto"},
-      {en:"acid",pron:"",es:"ácido"},
-      {en:"hard working",pron:"",es:"trabajador/a"},
-      {en:"creative",pron:"",es:"creativo/a"},
-      {en:"moody",pron:"",es:"temperamental (un minuto bien, al siguiente enojado)"},
-      {en:"cheerful",pron:"",es:"alegre"},
-      {en:"extrovert / introvert",pron:"",es:"extrovertido / introvertido"},
-      {en:"strangers",pron:"",es:"desconocidos"},
-      {en:"upside down",pron:"",es:"al revés / boca abajo"},
-      {en:"already",pron:"",es:"ya (algo que ya ocurrió)"},
-      {en:"not yet",pron:"",es:"todavía no"},
-      {en:"solved",pron:"",es:"resuelto"}
+      {en:"acid",pron:"/ˈæsɪd/",es:"ácido"},
+      {en:"hard working",pron:"/hɑːrd ˈwɜːrkɪŋ/",es:"trabajador/a"},
+      {en:"creative",pron:"/kriˈeɪtɪv/",es:"creativo/a"},
+      {en:"moody",pron:"/ˈmuːdi/",es:"temperamental (un minuto bien, al siguiente enojado)"},
+      {en:"cheerful",pron:"/ˈtʃɪərfəl/",es:"alegre"},
+      {en:"extrovert / introvert",pron:"/ˈekstrəvɜːrt/ /ˈɪntrəvɜːrt/",es:"extrovertido / introvertido"},
+      {en:"strangers",pron:"/ˈstreɪndʒərz/",es:"desconocidos"},
+      {en:"upside down",pron:"/ˌʌpsaɪd ˈdaʊn/",es:"al revés / boca abajo"},
+      {en:"already",pron:"/ɔːlˈredi/",es:"ya (algo que ya ocurrió)"},
+      {en:"not yet",pron:"/nɒt jet/",es:"todavía no"},
+      {en:"solved",pron:"/sɒlvd/",es:"resuelto"}
     ],
     gramatica:[
       {titulo:"Artículos: THE vs A/AN",
@@ -569,25 +569,25 @@ const INITIAL_CLASSES = [
   {
     id:21, date:"2025-06-30", titulo:"Presentación del libro, leyenda del hilo rojo y vocabulario narrativo",
     vocab:[
-      {en:"presentation",pron:"",es:"presentación"},
-      {en:"mess",pron:"",es:"desastre / caos (estado de un lugar)"},
-      {en:"chaos / chaotic",pron:"",es:"caos / caótico"},
-      {en:"writer",pron:"",es:"escritor/a"},
-      {en:"topic",pron:"",es:"tema"},
-      {en:"thread",pron:"",es:"hilo"},
-      {en:"the red thread",pron:"",es:"el hilo rojo"},
-      {en:"legend",pron:"",es:"leyenda"},
-      {en:"invisible",pron:"",es:"invisible"},
-      {en:"connects / links",pron:"",es:"une / conecta"},
-      {en:"tense",pron:"",es:"tensionar / tensar"},
-      {en:"stretch",pron:"",es:"estirar"},
-      {en:"broken",pron:"",es:"roto / cortado"},
-      {en:"fictional",pron:"",es:"ficticio / de ficción"},
-      {en:"publisher",pron:"",es:"editorial"},
-      {en:"flyer",pron:"",es:"volante / folleto"},
-      {en:"remind",pron:"",es:"recordar (a alguien algo)"},
-      {en:"all the contrary",pron:"",es:"todo lo contrario"},
-      {en:"the girl next door",pron:"",es:"la chica de al lado (expresión)"},
+      {en:"presentation",pron:"/ˌprezənˈteɪʃən/",es:"presentación"},
+      {en:"mess",pron:"/mes/",es:"desastre / caos (estado de un lugar)"},
+      {en:"chaos / chaotic",pron:"/ˈkeɪɒs/ /keɪˈɒtɪk/",es:"caos / caótico"},
+      {en:"writer",pron:"/ˈraɪtər/",es:"escritor/a"},
+      {en:"topic",pron:"/ˈtɒpɪk/",es:"tema"},
+      {en:"thread",pron:"/θred/",es:"hilo"},
+      {en:"the red thread",pron:"/ðə red θred/",es:"el hilo rojo"},
+      {en:"legend",pron:"/ˈledʒənd/",es:"leyenda"},
+      {en:"invisible",pron:"/ɪnˈvɪzɪbəl/",es:"invisible"},
+      {en:"connects / links",pron:"/kəˈnekts/ /lɪŋks/",es:"une / conecta"},
+      {en:"tense",pron:"/tens/",es:"tensionar / tensar"},
+      {en:"stretch",pron:"/stretʃ/",es:"estirar"},
+      {en:"broken",pron:"/ˈbroʊkən/",es:"roto / cortado"},
+      {en:"fictional",pron:"/ˈfɪkʃənəl/",es:"ficticio / de ficción"},
+      {en:"publisher",pron:"/ˈpʌblɪʃər/",es:"editorial"},
+      {en:"flyer",pron:"/ˈflaɪər/",es:"volante / folleto"},
+      {en:"remind",pron:"/rɪˈmaɪnd/",es:"recordar (a alguien algo)"},
+      {en:"all the contrary",pron:"/ɔːl ðə ˈkɒntrəri/",es:"todo lo contrario"},
+      {en:"the girl next door",pron:"/ðə ɡɜːrl nekst dɔːr/",es:"la chica de al lado (expresión)"},
       {en:"one flat is empty",pron:"",es:"un departamento está vacío"}
     ],
     gramatica:[
@@ -620,6 +620,64 @@ const INITIAL_CLASSES = [
       {en:"My hair is chaotic.",es:"Mi pelo está caótico."},
       {en:"One flat is empty.",es:"Un departamento está vacío."},
       {en:"The girl next door.",es:"La chica de al lado."}
+    ]
+  },
+  {
+    id:22, date:"2025-07-02", titulo:"Expresiones nativas, búsqueda de trabajo y vocabulario cotidiano",
+    vocab:[
+      {en:"Don't even get me started",pron:"/doʊnt ˈiːvən ɡet miː ˈstɑːrtɪd/",es:"No me hables del tema / No quiero saber nada"},
+      {en:"I feel awful",pron:"/ˈɔːfəl/",es:"Me siento muy mal / terrible"},
+      {en:"I can't believe it",pron:"/aɪ kɑːnt bɪˈliːv ɪt/",es:"No puedo creerlo (NO: I don't believe)"},
+      {en:"Get ready for it",pron:"/ɡet ˈredi fər ɪt/",es:"Preparate para eso"},
+      {en:"hot water bag",pron:"/hɒt ˈwɔːtər bæɡ/",es:"bolsa de agua caliente"},
+      {en:"I have something to show you",pron:"/aɪ hæv ˈsʌmθɪŋ tuː ʃoʊ juː/",es:"Tengo algo para mostrarte"},
+      {en:"Go ahead",pron:"",es:"Adelante"},
+      {en:"not yet",pron:"/nɒt jet/",es:"todavía no / aún no"},
+      {en:"no news",pron:"/nəʊ njuːz/",es:"ninguna noticia"},
+      {en:"in the meantime",pron:"/ɪn ðə ˈmiːntaɪm/",es:"mientras tanto"},
+      {en:"quietly",pron:"/ˈkwaɪətli/",es:"tranquilamente / en silencio"},
+      {en:"look for jobs",pron:"/lʊk fər dʒɒbz/",es:"buscar trabajo"},
+      {en:"nowadays / these days",pron:"",es:"hoy en día / actualmente"},
+      {en:"stressing / stressful",pron:"/ˈstresɪŋ/ /ˈstresfəl/",es:"estresante"},
+      {en:"papers",pron:"/ˈpeɪpərz/",es:"diarios / periódicos (en papel)"},
+      {en:"secretary",pron:"/ˈsekrəteri/",es:"secretario/a"},
+      {en:"receptionist",pron:"/rɪˈsepʃənɪst/",es:"recepcionista"},
+      {en:"through",pron:"/zru/",es:"a través de"},
+      {en:"cloud",pron:"/kláud/",es:"nube"},
+      {en:"You are on the right track",pron:"/juː ɑːr ɒn ðə raɪt træk/",es:"Vas por el buen camino"}
+    ],
+    gramatica:[
+      {titulo:"Expresiones nativas clave",
+       formula:"Don't even get me started = No me hables del tema\nI can't believe it (NO 'I don't believe')\nIn the meantime = mientras tanto\nNot yet = todavía no\nGo ahead = adelante",
+       ejemplos:["Don't even get me started about the cold!","Not yet. No news.","In the meantime, I am looking for jobs quietly."]},
+      {titulo:"IT como sujeto impersonal",
+       formula:"En inglés se necesita sujeto siempre. Para hablar del tiempo, situaciones o emociones se usa IT:\nIt is very stressful. (NO 'is very stress')\nIt is not very nice. (NO 'I don't very nice')\nIt is cold today.",
+       ejemplos:["It is very stressful to look for jobs.","It is not very nice, but I am calm.","It is the most popular site nowadays."]}
+    ],
+    correcciones:[
+      {wrong:"no speak for topic",right:"Don't even get me started! (expresión nativa)"},
+      {wrong:"i am very bad per weather",right:"I feel awful about the weather."},
+      {wrong:"i don't bealive",right:"I can't believe it."},
+      {wrong:"bag hot and mate also",right:"hot water bag and mate also"},
+      {wrong:"i have display something for you",right:"I have something to show you."},
+      {wrong:"when go to camera i to show you",right:"When we go to camera, I will show you."},
+      {wrong:"no still / notingh news",right:"Not yet. / No news."},
+      {wrong:"i am looking Jobs quait",right:"I am looking for jobs quietly."},
+      {wrong:"is …….. site for search today day",right:"It is the most popular site to look for jobs nowadays."},
+      {wrong:"i dont very nice, is very stress",right:"It is not very nice. It is very stressful."},
+      {wrong:"yes exiten still but nobody read",right:"Yes, there still are, but nobody reads them."}
+    ],
+    frases:[
+      {en:"Don't even get me started!",es:"¡No me hables del tema!"},
+      {en:"I feel awful about the weather.",es:"Me siento muy mal con el clima."},
+      {en:"Get ready for it!",es:"¡Preparate para eso!"},
+      {en:"I have something to show you.",es:"Tengo algo para mostrarte."},
+      {en:"Not yet. No news.",es:"Todavía no. Sin noticias."},
+      {en:"In the meantime, I am looking for jobs quietly.",es:"Mientras tanto, estoy buscando trabajo tranquilamente."},
+      {en:"It is the most popular site to look for jobs nowadays.",es:"Es el sitio más popular para buscar trabajo hoy en día."},
+      {en:"Nobody reads them anymore.",es:"Ya nadie los lee."},
+      {en:"You are on the right track.",es:"Vas por el buen camino."},
+      {en:"Through",es:"A través de /zru/"}
     ]
   }
 ];
