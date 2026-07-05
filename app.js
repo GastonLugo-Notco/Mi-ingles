@@ -156,7 +156,7 @@ function switchTab(evt, id, tab) {
 function tabVocab(c) {
   if(!(c.vocab||[]).length) return '<p style="color:var(--ink3);font-size:13px">Sin vocabulario.</p>';
   return `<table class="vtbl"><thead><tr>
-    <th style="width:36%">Inglés</th><th style="width:22%">Pronunciación</th><th>Español</th>
+    <th style="width:32%">Inglés</th><th style="width:24%">Fonética / Pronunciación</th><th>Español</th>
   </tr></thead><tbody>
     ${c.vocab.map(v=>`<tr>
       <td><span class="v-en">${v.en||''}</span></td>
@@ -421,40 +421,92 @@ function clearUnknowns(){
 function renderQuiz(pg) {
   const all = getPracticePool();
   if(all.length<4) { pg.innerHTML=`<div class="empty"><div class="empty-icon">🎯</div><h3>Necesitás al menos 4 tarjetas</h3></div>`; return; }
+
   if(!PS||PS.view!=='quiz') {
+    const wrongCount = (DB.quizWrong||[]).length;
     pg.innerHTML=`<div class="practice-wrap">
-      <p style="font-size:13px;color:var(--ink3);margin-bottom:20px">Quiz con ${all.length} tarjetas (vocabulario + frases). Elegís la traducción correcta entre 4 opciones.</p>
-      <div style="text-align:center"><button class="btn teal" onclick="startQuiz()">▶ Empezar quiz</button></div>
+      <p style="font-size:13px;color:var(--ink3);margin-bottom:20px">Quiz con <strong>${all.length} tarjetas</strong> — vocabulario + frases de todas tus clases.</p>
+      <div class="mode-grid">
+        <div class="mode-card" onclick="startQuiz('all')">
+          <div class="mc-icon">🎯</div>
+          <div class="mc-name">Quiz completo</div>
+          <div class="mc-desc">Todas las tarjetas mezcladas al azar.</div>
+        </div>
+        ${wrongCount>0?`<div class="mode-card" onclick="startQuiz('wrong')">
+          <div class="mc-icon">🔁</div>
+          <div class="mc-name">Repasar errores (${wrongCount})</div>
+          <div class="mc-desc">Solo las que contestaste mal en el último quiz.</div>
+        </div>`:''}
+      </div>
+      ${wrongCount>0?`<div style="text-align:center;margin-top:8px"><button class="btn ghost sm" onclick="clearQuizWrong()">🗑 Limpiar errores del quiz</button></div>`:''}
     </div>`; return;
   }
-  const {cards,idx,score} = PS;
+
+  const {cards,idx,score,wrong} = PS;
+
   if(idx>=cards.length){
     const pct=Math.round((score/cards.length)*100);
+    // Save wrong answers
+    DB.quizWrong = wrong;
+    dbSave(DB);
     pg.innerHTML=`<div class="practice-wrap"><div class="score-wrap">
       <div class="score-big">${pct}%</div>
       <h3 style="font-size:20px;font-weight:800;margin:12px 0 5px">${pct>=70?'¡Muy bien!':'Seguí practicando'}</h3>
       <p class="score-sub">Acertaste ${score} de ${cards.length}</p>
-      <div style="display:flex;gap:10px;justify-content:center;margin-top:20px">
+      ${wrong.length>0?`<p style="font-size:12px;color:var(--coral);margin-top:8px">📌 ${wrong.length} errores guardados para repasar</p>`:'<p style="font-size:12px;color:var(--teal);margin-top:8px">✓ ¡Sin errores!</p>'}
+      <div style="display:flex;gap:10px;justify-content:center;margin-top:20px;flex-wrap:wrap">
         <button class="btn ghost" onclick="PS=null;renderQuiz(document.getElementById('page'))">← Volver</button>
-        <button class="btn teal" onclick="startQuiz()">Repetir</button>
+        <button class="btn teal" onclick="startQuiz('all')">Repetir completo</button>
+        ${wrong.length>0?`<button class="btn" style="background:var(--coral);color:#fff;border:none" onclick="startQuiz('wrong')">🔁 Repasar ${wrong.length} errores</button>`:''}
       </div></div></div>`; return;
   }
+
   const card=cards[idx];
-  const dist=all.filter(v=>v!==card).sort(()=>Math.random()-.5).slice(0,3);
+  const dist=all.filter(v=>v!==card&&v.es!==card.es).sort(()=>Math.random()-.5).slice(0,3);
   const opts=[...dist.map(v=>v.es),card.es].sort(()=>Math.random()-.5);
+  const badge = card.type==='frase' ? '<span style="font-size:10px;background:var(--purple);color:#fff;border-radius:999px;padding:2px 8px;margin-left:8px">EXPRESIÓN</span>' : '';
   pg.innerHTML=`<div class="practice-wrap">
     <div class="prog-bar"><div class="prog-fill" style="width:${(idx/cards.length)*100}%"></div></div>
-    <p class="prog-txt">${idx+1} de ${cards.length} · Puntaje: ${score}</p>
+    <p class="prog-txt">${idx+1} de ${cards.length} · ✅ ${score} · ❌ ${idx-score}</p>
     <div class="quiz-card">
-      <div class="quiz-q">¿Qué significa <strong>"${card.en}"</strong>?</div>
-      <div class="quiz-opts">${opts.map(o=>`<button class="quiz-opt" onclick="answerQ(this,'${esc(o)}','${esc(card.es)}')">${o}</button>`).join('')}</div>
+      <div class="quiz-q">¿Qué significa <strong>"${card.en}"</strong>${badge}?</div>
+      <div class="quiz-opts">${opts.map(o=>`<button class="quiz-opt" onclick="answerQ(this,'${esc(o)}','${esc(card.es)}','${esc(card.en)}')">${o}</button>`).join('')}</div>
     </div></div>`;
 }
-function startQuiz(){const all=getPracticePool();PS={view:'quiz',cards:[...all].sort(()=>Math.random()-.5),idx:0,score:0};renderQuiz(document.getElementById('page'));}
-function answerQ(btn,chosen,correct){
-  document.querySelectorAll('.quiz-opt').forEach(b=>{b.classList.add('disabled');b.onclick=null;if(b.textContent.trim()===correct)b.classList.add('correct');});
-  if(chosen===correct){btn.classList.add('correct');PS.score++;}else btn.classList.add('wrong');
+
+function startQuiz(mode){
+  const all = getPracticePool();
+  let cards;
+  if(mode==='wrong' && (DB.quizWrong||[]).length>0) {
+    cards = [...DB.quizWrong].sort(()=>Math.random()-.5);
+  } else {
+    cards = [...all].sort(()=>Math.random()-.5);
+  }
+  PS={view:'quiz',cards,idx:0,score:0,wrong:[]};
+  renderQuiz(document.getElementById('page'));
+}
+
+function answerQ(btn,chosen,correct,cardEn){
+  document.querySelectorAll('.quiz-opt').forEach(b=>{
+    b.classList.add('disabled');b.onclick=null;
+    if(b.textContent.trim()===correct)b.classList.add('correct');
+  });
+  if(chosen===correct){
+    btn.classList.add('correct');
+    PS.score++;
+  } else {
+    btn.classList.add('wrong');
+    // Save to wrong list
+    const card = PS.cards[PS.idx];
+    if(!PS.wrong.find(w=>w.en===card.en)) PS.wrong.push({...card});
+  }
   setTimeout(()=>{PS.idx++;renderQuiz(document.getElementById('page'));},1300);
+}
+
+function clearQuizWrong(){
+  DB.quizWrong=[];dbSave(DB);
+  renderQuiz(document.getElementById('page'));
+  toast('Errores del quiz limpiados');
 }
 
 // ─── MODAL ────────────────────────────────────────────────────────────────────
