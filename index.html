@@ -5,11 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mi Inglés · Clases con Euge</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=202607122305">
 </head>
 <body>
 <div class="shell">
-  <!-- SIDEBAR -->
   <aside class="sidebar" id="sidebar">
     <div class="sb-top">
       <div class="sb-brand">
@@ -21,7 +20,6 @@
       </div>
       <button class="sb-close" id="sb-close">✕</button>
     </div>
-
     <nav class="sb-nav">
       <div class="sb-section">Aprender</div>
       <button class="sb-btn active" data-view="home"><span>📚</span>Mis clases<span class="badge" id="cnt-classes">0</span></button>
@@ -29,25 +27,19 @@
       <button class="sb-btn" data-view="tenses"><span>⏱</span>Tiempos verbales</button>
       <button class="sb-btn" data-view="grammar"><span>⚙️</span>Gramática</button>
       <button class="sb-btn" data-view="errors"><span>✍️</span>Mis errores<span class="badge" id="cnt-errors">0</span></button>
-
       <div class="sb-section">Recursos</div>
       <button class="sb-btn" data-view="guides"><span>📋</span>Guías de estudio</button>
       <button class="sb-btn" data-view="phrases"><span>💬</span>Frases útiles</button>
-
       <div class="sb-section">Practicar</div>
       <button class="sb-btn" data-view="flashcards"><span>🃏</span>Flashcards</button>
       <button class="sb-btn" data-view="quiz"><span>🎯</span>Quiz</button>
-
       <div class="sb-section">Mis clases</div>
       <div id="sb-classes"></div>
     </nav>
-
     <div class="sb-footer">
       <button class="btn-new" id="btn-new">+ Nueva clase</button>
     </div>
   </aside>
-
-  <!-- MAIN -->
   <main class="main">
     <div class="topbar">
       <button class="hamburger" id="hamburger">☰</button>
@@ -57,8 +49,6 @@
     <div class="page" id="page"></div>
   </main>
 </div>
-
-<!-- MODAL -->
 <div class="modal-bg" id="modal-bg">
   <div class="modal">
     <div class="modal-hd">
@@ -75,9 +65,8 @@
     </div>
   </div>
 </div>
-
 <div class="toast" id="toast"></div>
-<script src="data.js"></script>
-<script src="app.js"></script>
+<script src="data.js?v=202607122305"></script>
+<script src="app.js?v=202607122305"></script>
 </body>
 </html>
