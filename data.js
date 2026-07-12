@@ -679,6 +679,112 @@ const INITIAL_CLASSES = [
       {en:"You are on the right track.",es:"Vas por el buen camino."},
       {en:"Through",es:"A través de /zru/"}
     ]
+  },
+  {
+    id:23, date:"2025-07-06", titulo:"Expresiones nativas, trabajo y descripciones físicas",
+    vocab:[
+      {en:"except for",pron:"/ɪkˈsept fər/",es:"excepto por / salvo"},
+      {en:"it is going to take a while",pron:"",es:"va para largo / va a llevar tiempo"},
+      {en:"over-anxious",pron:"/ˌoʊvər ˈæŋkʃəs/",es:"demasiado ansioso (OVER = demasiado)"},
+      {en:"I am not in your shoes",pron:"",es:"No estoy en tu lugar"},
+      {en:"You rock!",pron:"",es:"¡La rompés! / ¡Sos genial!"},
+      {en:"so far",pron:"",es:"por ahora / hasta ahora"},
+      {en:"I don't give it a f***",pron:"",es:"Me chupa un huevo (muy informal)"},
+      {en:"written down",pron:"/ˈrɪtən daʊn/",es:"anotado (NOT 'anotated')"},
+      {en:"pretty",pron:"/ˈprɪti/",es:"bonita / linda (mujer)"},
+      {en:"handsome",pron:"/ˈhænsəm/",es:"apuesto / buen mozo (hombre)"},
+      {en:"cute",pron:"/kjuːt/",es:"lindo/a (para cualquiera)"},
+      {en:"good looking",pron:"/ɡʊd ˈlʊkɪŋ/",es:"bien parecido/a"},
+      {en:"a glass of wine",pron:"/ə ɡlɑːs əv waɪn/",es:"una copa de vino"},
+      {en:"I prefer X over Y",pron:"",es:"Prefiero X antes que Y"},
+      {en:"three-roomed flat",pron:"/θriː ruːmd flæt/",es:"departamento de tres ambientes"},
+      {en:"sporty events",pron:"/ˈspɔːrti ɪˈvents/",es:"eventos deportivos"},
+      {en:"over-",pron:"",es:"prefijo: demasiado / excesivamente"},
+      {en:"things happen",pron:"",es:"cosas que pasan / así es la vida"}
+    ],
+    gramatica:[
+      {titulo:"OVER = demasiado (prefijo)",
+       formula:"OVER + adjetivo = demasiado / excesivamente\nover-anxious = demasiado ansioso\noverworked = sobrecargado de trabajo\noverwhelmed = abrumado\noverreact = reaccionar exageradamente",
+       ejemplos:["I feel over-anxious about the job situation.","She is overworked this month.","Don't overreact, it's just a delay."]},
+      {titulo:"Descripciones físicas — vocabulario clave",
+       formula:"She's PRETTY / BEAUTIFUL → mujer\nHe's HANDSOME / GOOD-LOOKING → hombre\nShe's / He's CUTE → cualquiera (lindo/a)\nIt has BEAUTIFUL houses → lugares / cosas",
+       ejemplos:["She's pretty and very smart.","He's handsome but a bit moody.","The city has beautiful old buildings."]},
+      {titulo:"I prefer X OVER Y",
+       formula:"I prefer mate OVER coffee.\n→ Prefiero el mate antes que el café.\nTambién: I prefer X TO Y / I like X more than Y",
+       ejemplos:["I prefer summer over winter.","I prefer training in the morning over the evening."]}
+    ],
+    correcciones:[
+      {wrong:"sacando el frío, i am good",right:"Except for the cold, I am good."},
+      {wrong:"i am feeling a good week",right:"I feel it is going to be a good week."},
+      {wrong:"it is topic go to long time",right:"It is going to take a while."},
+      {wrong:"i see to you",right:"I can see it. (puedo verlo en vos)"},
+      {wrong:"i am very relax still",right:"I am STILL very RELAXED."},
+      {wrong:"for hours i understand",right:"So far, I understand."},
+      {wrong:"anotated",right:"written down (NOT 'anotated')"},
+      {wrong:"no problem, happen thing",right:"No problem. Things happen."}
+    ],
+    frases:[
+      {en:"Except for the cold, I am good.",es:"Excepto por el frío, estoy bien."},
+      {en:"It is going to take a while.",es:"Va para largo / Va a llevar tiempo."},
+      {en:"I am not in your shoes.",es:"No estoy en tu lugar."},
+      {en:"You rock!",es:"¡La rompés! ¡Sos genial!"},
+      {en:"So far, I understand.",es:"Por ahora, entiendo."},
+      {en:"We should take things this way.",es:"Deberíamos tomarnos así las cosas."},
+      {en:"I don't know what happens to me — maybe I am getting older.",es:"No sé qué me pasa — quizás me estoy haciendo mayor."},
+      {en:"I prefer mate over coffee.",es:"Prefiero el mate antes que el café."},
+      {en:"It is a three-roomed flat.",es:"Es un departamento de tres ambientes."}
+    ]
+  },
+  {
+    id:24, date:"2025-07-10", titulo:"Vivir al límite, feriados y el video sobre el arte",
+    vocab:[
+      {en:"sleepy",pron:"/ˈsliːpi/",es:"con sueño (NOT 'I have dream')"},
+      {en:"public holiday",pron:"/ˈpʌblɪk ˈhɒlɪdeɪ/",es:"feriado"},
+      {en:"to live at the edge",pron:"",es:"vivir al límite"},
+      {en:"the less... the more...",pron:"",es:"cuanto menos... más..."},
+      {en:"active",pron:"/ˈæktɪv/",es:"activo/a"},
+      {en:"deadline",pron:"/ˈdedlaɪn/",es:"fecha límite / plazo"},
+      {en:"I swear",pron:"/aɪ sweər/",es:"insulto (como 'puteo') / juro"},
+      {en:"I can't help doing it",pron:"",es:"no puedo evitar hacerlo"},
+      {en:"genius",pron:"/ˈdʒiːniəs/",es:"genio"},
+      {en:"indeed",pron:"/ɪnˈdiːd/",es:"realmente / efectivamente"},
+      {en:"marvellous",pron:"/ˈmɑːrvələs/",es:"maravilloso"},
+      {en:"image",pron:"/ˈɪmɪdʒ/",es:"imagen"},
+      {en:"church",pron:"/tʃɜːrtʃ/",es:"iglesia"},
+      {en:"my fault",pron:"/maɪ fɔːlt/",es:"mi culpa"},
+      {en:"art generates emotion",pron:"",es:"el arte genera emoción"},
+      {en:"personal",pron:"/ˈpɜːrsənəl/",es:"personal"},
+      {en:"daily life",pron:"/ˈdeɪli laɪf/",es:"vida cotidiana / vida diaria"}
+    ],
+    gramatica:[
+      {titulo:"THE LESS... THE MORE... (comparativa doble)",
+       formula:"The LESS time I have, the MORE active I get.\nThe MORE you practice, the BETTER you speak.\nThe LESS you worry, the HAPPIER you are.\n\nEstructura: The + comparativo + sujeto + verbo, the + comparativo + sujeto + verbo",
+       ejemplos:["The less time I have, the more active I get.","The more you practice, the better your English gets.","The less money I spend, the more I save."]},
+      {titulo:"CAN'T HELP + verb-ING (no poder evitar algo)",
+       formula:"I CAN'T HELP doing it. = No puedo evitar hacerlo.\nI can't help laughing. = No puedo evitar reírme.\nI can't help thinking about it. = No puedo evitar pensarlo.",
+       ejemplos:["I swear but I can't help doing it.","She can't help smiling when she sees him.","I can't help eating chocolate when I'm stressed."]}
+    ],
+    correcciones:[
+      {wrong:"i have dream (tengo sueño)",right:"I am SLEEPY. (NOT 'I have dream')"},
+      {wrong:"my life always limit",right:"I live at the edge the whole time."},
+      {wrong:"where less i have time, i more activation",right:"The less time I have, the more active I get."},
+      {wrong:"i do two days before",right:"I do the presentation two days before IT."},
+      {wrong:"in my work i have one week",right:"In my work, I have a deadline of one week."},
+      {wrong:"let go",right:"Let's go (con apóstrofe — es 'let us go')"},
+      {wrong:"no problem, happen thing",right:"No problem. Things happen."}
+    ],
+    frases:[
+      {en:"Things happen.",es:"Cosas que pasan. / Así es la vida."},
+      {en:"I live at the edge the whole time.",es:"Vivo al límite todo el tiempo."},
+      {en:"The less time I have, the more active I get.",es:"Cuanto menos tiempo tengo, más me activo."},
+      {en:"I have a deadline of one week.",es:"Tengo un plazo de una semana."},
+      {en:"I swear but I can't help doing it.",es:"Insulto pero no puedo evitar hacerlo."},
+      {en:"Things are always OK!",es:"¡Siempre está todo bien!"},
+      {en:"My fault.",es:"Mi culpa / Fue mi culpa."},
+      {en:"Art means many different things for many different people.",es:"El arte significa muchas cosas diferentes para muchas personas diferentes."},
+      {en:"Art generates emotion.",es:"El arte genera emoción."},
+      {en:"I live on the edge — the less time I have, the more active I get.",es:"Vivo al límite — cuanto menos tiempo tengo, más me activo."}
+    ]
   }
 ];
 
