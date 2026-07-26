@@ -1,7 +1,7 @@
 // ─── CLASES ──────────────────────────────────────────────────────────────────
 const INITIAL_CLASSES = [
   {
-    id:1, date:"2025-04-01", titulo:"Primera toma de contacto — frases básicas",
+    id:1, date:"2026-04-01", titulo:"Primera toma de contacto — frases básicas",
     vocab:[
       {en:"Hello / Hi there",pron:"/həˈloʊ/ /haɪ ðeər/",es:"Hola"},
       {en:"See you",pron:"/siː juː/",es:"Hasta luego / Nos vemos"},
@@ -18,7 +18,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:2, date:"2025-04-06", titulo:"Partes de la casa, estaciones y Present Simple",
+    id:2, date:"2026-04-06", titulo:"Partes de la casa, estaciones y Present Simple",
     vocab:[
       {en:"bedroom",pron:"/ˈbedrʊm/",es:"dormitorio"},{en:"bathroom",pron:"/bázrum/",es:"baño"},
       {en:"kitchen",pron:"/ˈkɪtʃɪn/",es:"cocina"},{en:"living room",pron:"/ˈlɪvɪŋ ruːm/",es:"sala de estar"},
@@ -35,7 +35,7 @@ const INITIAL_CLASSES = [
     frases:[{en:"I like it very much",es:"Me gusta mucho"},{en:"flat = apartment",es:"departamento (ambas correctas)"}]
   },
   {
-    id:3, date:"2025-04-08", titulo:"Pronombres, Verb To Be (presente y pasado)",
+    id:3, date:"2026-04-08", titulo:"Pronombres, Verb To Be (presente y pasado)",
     vocab:[
       {en:"What does ... mean?",pron:"/wɒt dʌz ... miːn/",es:"¿Qué significa ...?"},
       {en:"mean",pron:"/miːn/",es:"significar"},
@@ -59,7 +59,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:4, date:"2025-04-10", titulo:"Entrenamiento, ubicación y Present Perfect vs Past Simple",
+    id:4, date:"2026-04-10", titulo:"Entrenamiento, ubicación y Present Perfect vs Past Simple",
     vocab:[
       {en:"strength training",pron:"/streŋθ ˈtreɪnɪŋ/",es:"entrenamiento de fuerza"},
       {en:"blocks (from my house)",pron:"/blɒks/",es:"cuadras de mi casa"},
@@ -85,7 +85,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:5, date:"2025-04-14", titulo:"Barrio, because/because of y vocabulario cotidiano",
+    id:5, date:"2026-04-14", titulo:"Barrio, because/because of y vocabulario cotidiano",
     vocab:[
       {en:"neighbourhood",pron:"/ˈneɪbərhʊd/",es:"barrio"},{en:"quiet",pron:"/kuáiet/",es:"tranquilo/a"},
       {en:"landscape",pron:"/ˈlændskeɪp/",es:"paisaje"},{en:"during",pron:"/ˈdjʊərɪŋ/",es:"durante"},
@@ -104,7 +104,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:6, date:"2025-04-17", titulo:"Viaje a Perú, formas de futuro y comparaciones",
+    id:6, date:"2026-04-17", titulo:"Viaje a Perú, formas de futuro y comparaciones",
     vocab:[
       {en:"neither",pron:"/níder/",es:"yo tampoco (Me neither)"},
       {en:"flavourful / tasty",pron:"/ˈfleɪvərfəl/ /ˈteɪsti/",es:"sabroso"},
@@ -127,7 +127,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:7, date:"2025-05-11", titulo:"Clima, bored vs boring, escaleras y comidas",
+    id:7, date:"2026-05-11", titulo:"Clima, bored vs boring, escaleras y comidas",
     vocab:[
       {en:"bored",pron:"/bɔːrd/",es:"aburrido (cómo ME siento)"},
       {en:"boring",pron:"/ˈbɔːrɪŋ/",es:"aburrido (cómo ES algo/alguien)"},
@@ -153,7 +153,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:8, date:"2025-05-14", titulo:"Deportes, rutinas y Present Simple completo",
+    id:8, date:"2026-05-14", titulo:"Deportes, rutinas y Present Simple completo",
     vocab:[
       {en:"lungs",pron:"/lʌŋz/",es:"pulmones"},{en:"brave",pron:"/breɪv/",es:"valiente"},
       {en:"have breakfast",pron:"/hæv ˈbrekfəst/",es:"desayunar"},{en:"breakfast",pron:"/ˈbrekfəst/",es:"desayuno"},
@@ -174,7 +174,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:9, date:"2025-05-18", titulo:"Rutina matutina y WHAT como sujeto",
+    id:9, date:"2026-05-18", titulo:"Rutina matutina y WHAT como sujeto",
     vocab:[
       {en:"brush my teeth",pron:"/brʌʃ maɪ tiːθ/",es:"cepillarme los dientes"},
       {en:"wake up / woke up",pron:"/weɪk ʌp/ /woʊk ʌp/",es:"despertarse / me desperté"},
@@ -192,7 +192,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:10, date:"2025-05-21", titulo:"Rutinas, sleep, ansiedad y vocabulario cotidiano",
+    id:10, date:"2026-05-21", titulo:"Rutinas, sleep, ansiedad y vocabulario cotidiano",
     vocab:[
       {en:"totally agree",pron:"/ˈtoʊtəli əˈɡriː/",es:"totalmente de acuerdo"},
       {en:"anxious",pron:"/án-shus/",es:"ansioso/a"},
@@ -212,7 +212,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:11, date:"2025-05-25", titulo:"Fórmula 1, sueños y motivación",
+    id:11, date:"2026-05-25", titulo:"Fórmula 1, sueños y motivación",
     vocab:[
       {en:"pilot / driver",pron:"/ˈpaɪlət/ /ˈdraɪvər/",es:"piloto"},
       {en:"race",pron:"/reɪs/",es:"carrera"},
@@ -235,7 +235,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:12, date:"2025-06-02", titulo:"Trabajo, emprendimiento y Present Continuous",
+    id:12, date:"2026-06-02", titulo:"Trabajo, emprendimiento y Present Continuous",
     vocab:[
       {en:"entrepreneur",pron:"/ˌɒntrəprəˈnɜːr/",es:"emprendedor"},
       {en:"gastronomic project",pron:"/ˌɡæstrəˈnɒmɪk ˈprɒdʒekt/",es:"proyecto gastronómico"},
@@ -255,7 +255,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:13, date:"2025-06-03", titulo:"Tecnología, trabajo de Fer y adjetivos antes del sustantivo",
+    id:13, date:"2026-06-03", titulo:"Tecnología, trabajo de Fer y adjetivos antes del sustantivo",
     vocab:[
       {en:"afraid",pron:"/əˈfreɪd/",es:"con miedo (I'm afraid = tengo miedo)"},
       {en:"light technician",pron:"/laɪt tekˈnɪʃən/",es:"técnico de luces"},
@@ -277,7 +277,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:14, date:"2025-06-04", titulo:"Present Perfect completo, HAVE TO y preposiciones",
+    id:14, date:"2026-06-04", titulo:"Present Perfect completo, HAVE TO y preposiciones",
     vocab:[
       {en:"humid / humidity",pron:"/ˈhjuːmɪd/ /hjuːˈmɪdɪti/",es:"húmedo / humedad"},
       {en:"behind",pron:"/bijáind/",es:"detrás"},
@@ -302,7 +302,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:15, date:"2025-06-08", titulo:"Londres, clima, Present Perfect con FOR y posesivo con apóstrofe",
+    id:15, date:"2026-06-08", titulo:"Londres, clima, Present Perfect con FOR y posesivo con apóstrofe",
     vocab:[
       {en:"sunlight",pron:"/ˈsʌnlaɪt/",es:"luz del sol"},
       {en:"mood",pron:"/muːd/",es:"estado de ánimo"},
@@ -344,7 +344,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:16, date:"2025-06-11", titulo:"Noticias del trabajo, this/that/these/those y hope",
+    id:16, date:"2026-06-11", titulo:"Noticias del trabajo, this/that/these/those y hope",
     vocab:[
       {en:"expectant",pron:"/ɪkˈspektənt/",es:"expectante"},
       {en:"announcement",pron:"/əˈnaʊnsmənt/",es:"anuncio"},
@@ -379,7 +379,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:17, date:"2025-06-16", titulo:"Rutinas, libros de Euge y emphasis con DO",
+    id:17, date:"2026-06-16", titulo:"Rutinas, libros de Euge y emphasis con DO",
     vocab:[
       {en:"sleepy",pron:"",es:"con sueño / dormido"},
       {en:"third",pron:"/θɜːrd/",es:"tercero"},
@@ -421,7 +421,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:18, date:"2025-06-18", titulo:"Frío extremo, descripciones con adjetivos y Verb To Be completo",
+    id:18, date:"2026-06-18", titulo:"Frío extremo, descripciones con adjetivos y Verb To Be completo",
     vocab:[
       {en:"freezing cold",pron:"/ˈfriːzɪŋ koʊld/",es:"un frío que cala los huesos"},
       {en:"blankets",pron:"",es:"mantas"},
@@ -460,7 +460,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:19, date:"2025-06-24", titulo:"Emojis, trabajo de Notco, partido y palabras expresivas",
+    id:19, date:"2026-06-24", titulo:"Emojis, trabajo de Notco, partido y palabras expresivas",
     vocab:[
       {en:"darkness",pron:"/ˈdɑːrknəs/",es:"oscuridad"},
       {en:"common",pron:"/ˈkɒmən/",es:"común / normal"},
@@ -512,7 +512,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:20, date:"2025-06-25", titulo:"Despedida de Notco, artículos y descripciones personales",
+    id:20, date:"2026-06-25", titulo:"Despedida de Notco, artículos y descripciones personales",
     vocab:[
       {en:"farewell",pron:"/ˌfeərˈwel/",es:"despedida"},
       {en:"strange / weird",pron:"/guíerd/",es:"raro / extraño"},
@@ -567,7 +567,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:21, date:"2025-06-30", titulo:"Presentación del libro, leyenda del hilo rojo y vocabulario narrativo",
+    id:21, date:"2026-06-30", titulo:"Presentación del libro, leyenda del hilo rojo y vocabulario narrativo",
     vocab:[
       {en:"presentation",pron:"/ˌprezənˈteɪʃən/",es:"presentación"},
       {en:"mess",pron:"/mes/",es:"desastre / caos (estado de un lugar)"},
@@ -623,7 +623,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:22, date:"2025-07-02", titulo:"Expresiones nativas, búsqueda de trabajo y vocabulario cotidiano",
+    id:22, date:"2026-07-02", titulo:"Expresiones nativas, búsqueda de trabajo y vocabulario cotidiano",
     vocab:[
       {en:"Don't even get me started",pron:"/doʊnt ˈiːvən ɡet miː ˈstɑːrtɪd/",es:"No me hables del tema / No quiero saber nada"},
       {en:"I feel awful",pron:"/ˈɔːfəl/",es:"Me siento muy mal / terrible"},
@@ -681,7 +681,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:23, date:"2025-07-06", titulo:"Expresiones nativas, trabajo y descripciones físicas",
+    id:23, date:"2026-07-06", titulo:"Expresiones nativas, trabajo y descripciones físicas",
     vocab:[
       {en:"except for",pron:"/ɪkˈsept fər/",es:"excepto por / salvo"},
       {en:"it is going to take a while",pron:"",es:"va para largo / va a llevar tiempo"},
@@ -736,7 +736,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:24, date:"2025-07-10", titulo:"Vivir al límite, feriados y el video sobre el arte",
+    id:24, date:"2026-07-10", titulo:"Vivir al límite, feriados y el video sobre el arte",
     vocab:[
       {en:"sleepy",pron:"/ˈsliːpi/",es:"con sueño (NOT 'I have dream')"},
       {en:"public holiday",pron:"/ˈpʌblɪk ˈhɒlɪdeɪ/",es:"feriado"},
@@ -787,7 +787,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:25, date:"2025-07-13", titulo:"Argentina vs partido, Tag Questions y Verb To Be pasado",
+    id:25, date:"2026-07-13", titulo:"Argentina vs partido, Tag Questions y Verb To Be pasado",
     vocab:[
       {en:"nightmare",pron:"/ˈnaɪtmeər/",es:"pesadilla"},
       {en:"standing",pron:"/ˈstændɪŋ/",es:"de pie / parado"},
@@ -833,7 +833,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:26, date:"2025-07-16", titulo:"Argentina campeón, Past Simple verbos regulares e irregulares",
+    id:26, date:"2026-07-16", titulo:"Argentina campeón, Past Simple verbos regulares e irregulares",
     vocab:[
       {en:"trusted",pron:"/ˈtrʌstɪd/",es:"confié / confiaba (pasado de trust)"},
       {en:"dunno",pron:"/ˈdʌnəʊ/",es:"don't know (muy informal)"},
@@ -877,7 +877,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:27, date:"2025-07-20", titulo:"Final perdida, COULD, AS WELL AS y GET USED TO",
+    id:27, date:"2026-07-20", titulo:"Final perdida, COULD, AS WELL AS y GET USED TO",
     vocab:[
       {en:"exhausted",pron:"/ɪɡˈzɔːstɪd/",es:"agotado/a"},
       {en:"couldn't",pron:"/ˈkʊdnt/",es:"no pudo / no podía (pasado negativo de CAN)"},
@@ -921,7 +921,7 @@ const INITIAL_CLASSES = [
     ]
   },
   {
-    id:28, date:"2025-07-23", titulo:"Sol de vuelta, maneras de saludar y Past Simple en conversación",
+    id:28, date:"2026-07-23", titulo:"Sol de vuelta, maneras de saludar y Past Simple en conversación",
     vocab:[
       {en:"gradually",pron:"/ˈɡrædʒuəli/",es:"gradualmente / poco a poco"},
       {en:"higher and higher",pron:"",es:"cada vez más alto (temperatura)"},
