@@ -785,6 +785,190 @@ const INITIAL_CLASSES = [
       {en:"Art generates emotion.",es:"El arte genera emoción."},
       {en:"I live on the edge — the less time I have, the more active I get.",es:"Vivo al límite — cuanto menos tiempo tengo, más me activo."}
     ]
+  },
+  {
+    id:25, date:"2025-07-13", titulo:"Argentina vs partido, Tag Questions y Verb To Be pasado",
+    vocab:[
+      {en:"nightmare",pron:"/ˈnaɪtmeər/",es:"pesadilla"},
+      {en:"standing",pron:"/ˈstændɪŋ/",es:"de pie / parado"},
+      {en:"alone",pron:"/əˈloʊn/",es:"solo (NOT 'only' = solamente)"},
+      {en:"fingers crossed",pron:"",es:"cruzar los dedos (desear suerte)"},
+      {en:"wanna",pron:"/ˈwɒnə/",es:"want to (informal)"},
+      {en:"gonna",pron:"/ˈɡɒnə/",es:"going to (informal)"},
+      {en:"gotta",pron:"/ˈɡɒtə/",es:"have got to / I've got to (informal)"},
+      {en:"because of",pron:"",es:"a causa de (+ sustantivo)"},
+      {en:"get up",pron:"",es:"levantarse (got up = pasado)"},
+      {en:"watch",pron:"",es:"ver / mirar (watched = pasado)"}
+    ],
+    gramatica:[
+      {titulo:"Tag Questions — ¿verdad? / ¿no?",
+       formula:"Afirmación + tag negativa: Nice morning, ISN'T IT?\nNegación + tag positiva: It wasn't good, WAS IT?\nOtras formas: Nice morning, RIGHT? / Nice morning, DON'T YOU THINK?",
+       ejemplos:["Nice morning, isn't it?","It was a nightmare, wasn't it?","You watched it alone, didn't you?"]},
+      {titulo:"LOVE / LIKE / HATE + verb-ING",
+       formula:"Después de LOVE, LIKE, HATE → siempre verbo + ING\nI love WATCHING matches.\nI hate LOSING.\nI like TRAINING alone.",
+       ejemplos:["I love watching F1 races alone.","I hate losing important matches.","She likes cooking on weekends."]},
+      {titulo:"Formas reducidas del inglés hablado",
+       formula:"want to → WANNA   /ˈwɒnə/\ngoing to → GONNA   /ˈɡɒnə/\nhave got to → GOTTA   /ˈɡɒtə/\n\n⚠ Solo para el habla informal. En escrito formal: formas completas.",
+       ejemplos:["I wanna be rich. (= I want to be rich)","You're gonna work here. (= going to)","I gotta go! (= I've got to go)"]}
+    ],
+    correcciones:[
+      {wrong:"nice morning true?",right:"Nice morning, ISN'T IT? / Nice morning, RIGHT?"},
+      {wrong:"after mach saturday",right:"After SATURDAY'S MATCH"},
+      {wrong:"is very difficult be in Argentino",right:"It is very difficult TO BE AN ARGENTINE."},
+      {wrong:"i get up the and whached for nervous",right:"I GOT UP and WATCHED IT STANDING (de pie) out of nerves."},
+      {wrong:"i love watch mach and race F1 only",right:"I love WATCHING matches and F1 RACES. ALONE (not 'only')."},
+      {wrong:"with how you wached mach?",right:"WHO DID YOU WATCH THE MATCH WITH?"},
+      {wrong:"the wenesdey not working nobody",right:"ON WEDNESDAY NOBODY WILL BE WORKING."}
+    ],
+    frases:[
+      {en:"Nice morning, isn't it?",es:"Linda mañana, ¿verdad?"},
+      {en:"It was a nightmare, wasn't it?",es:"Fue una pesadilla, ¿no?"},
+      {en:"I got up and watched it standing.",es:"Me levanté y lo vi de pie."},
+      {en:"I love watching matches alone.",es:"Me encanta ver los partidos solo."},
+      {en:"Who did you watch the match with?",es:"¿Con quién viste el partido?"},
+      {en:"On Wednesday nobody will be working.",es:"El miércoles nadie va a estar trabajando."},
+      {en:"Fingers crossed for Wednesday!",es:"¡Crucemos los dedos para el miércoles!"},
+      {en:"I wanna be rich.",es:"Quiero ser rico. (informal)"},
+      {en:"I gotta go!",es:"¡Tengo que irme! (informal)"}
+    ]
+  },
+  {
+    id:26, date:"2025-07-16", titulo:"Argentina campeón, Past Simple verbos regulares e irregulares",
+    vocab:[
+      {en:"trusted",pron:"/ˈtrʌstɪd/",es:"confié / confiaba (pasado de trust)"},
+      {en:"dunno",pron:"/ˈdʌnəʊ/",es:"don't know (muy informal)"},
+      {en:"suffered",pron:"/ˈsʌfərd/",es:"sufrí / sufriste (pasado de suffer)"},
+      {en:"I have a flu",pron:"",es:"tengo gripe (= I have influenza)"},
+      {en:"waiter",pron:"/ˈweɪtər/",es:"mozo"},
+      {en:"waitress",pron:"/ˈweɪtrɪs/",es:"mesera"},
+      {en:"ago",pron:"",es:"hace X tiempo (two days AGO)"},
+      {en:"last",pron:"",es:"pasado (last Monday = el lunes pasado)"},
+      {en:"it is all written",pron:"",es:"está todo escrito (3ra columna: write→wrote→WRITTEN)"},
+      {en:"pillow",pron:"/ˈpɪloʊ/",es:"almohada"}
+    ],
+    gramatica:[
+      {titulo:"Past Simple — verbos REGULARES (+ ED)",
+       formula:"visit → visited · work → worked\npaint → painted · wait → waited · play → played\n\n(+) I WORKED yesterday.\n(−) I DIDN'T work yesterday.\n(?) DID you WORK yesterday? Yes, I DID. / No, I DIDN'T.\n\n⚠ Con DID/DIDN'T: el verbo principal va en BASE FORM",
+       ejemplos:["I visited my parents last Sunday.","She didn't work yesterday.","Did you play tennis last week? Yes, I did."]},
+      {titulo:"Past Simple — verbos IRREGULARES (sin -ED)",
+       formula:"see → SAW · go → WENT · have → HAD\n\n(+) I SAW my neighbour TWO DAYS AGO.\n(−) I DIDN'T SEE my neighbour...\n(?) DID YOU SEE my neighbour? Yes, I did. / No, I didn't.\n\nPalabras clave del pasado: ago · last · yesterday",
+       ejemplos:["I saw my neighbour in the corner two days ago.","Did you see the whole press conference?","I didn't see the whole match."]},
+      {titulo:"I have NEVER + participio (Present Perfect negativo)",
+       formula:"I have NEVER suffered that much.\n(= Nunca sufrí tanto — experiencia de vida)\n\nNEITHER HAVE I = Yo tampoco",
+       ejemplos:["I have never suffered that much.","Neither have I! It was a torture.","I have never been to London."]}
+    ],
+    correcciones:[
+      {wrong:"Never i surfferd…",right:"I have NEVER SUFFERED that much."},
+      {wrong:"i also following in twitter",right:"I AM also following... (Present Continuous)"},
+      {wrong:"did you see the….. what the winner to world?",right:"DID YOU SEE all the coincidences that set us as winners?"},
+      {wrong:"i have few hours the dreams",right:"I have a FEW HOURS OF SLEEP."},
+      {wrong:"i have still fase pegada",right:"I still have the PILLOW on my face."},
+      {wrong:"i am bit sad becouse the result to yesterday mach",right:"I am A bit sad BECAUSE OF the result OF yesterday's match."}
+    ],
+    frases:[
+      {en:"I have never suffered that much.",es:"Nunca sufrí tanto."},
+      {en:"Neither have I!",es:"¡Yo tampoco!"},
+      {en:"I trusted — dunno why but I did.",es:"Confié — no sé por qué pero lo hice."},
+      {en:"It is all written.",es:"Está todo escrito."},
+      {en:"I saw my neighbour two days ago.",es:"Vi a mi vecino hace dos días."},
+      {en:"I didn't see the whole press conference.",es:"No vi toda la conferencia de prensa."},
+      {en:"Did you work yesterday? Yes, I did.",es:"¿Trabajaste ayer? Sí."},
+      {en:"I still have the pillow on my face.",es:"Todavía tengo la almohada en la cara."}
+    ]
+  },
+  {
+    id:27, date:"2025-07-20", titulo:"Final perdida, COULD, AS WELL AS y GET USED TO",
+    vocab:[
+      {en:"exhausted",pron:"/ɪɡˈzɔːstɪd/",es:"agotado/a"},
+      {en:"couldn't",pron:"/ˈkʊdnt/",es:"no pudo / no podía (pasado negativo de CAN)"},
+      {en:"could",pron:"/kʊd/",es:"podía / pudo (pasado de CAN)"},
+      {en:"recognize",pron:"/ˈrekəɡnaɪz/",es:"reconocer"},
+      {en:"effort",pron:"/ˈefərt/",es:"esfuerzo"},
+      {en:"do their best",pron:"",es:"dar lo mejor de sí / dar todo"},
+      {en:"energy left",pron:"",es:"energía que sobró / resto de energía"},
+      {en:"get used to",pron:"",es:"acostumbrarse a"},
+      {en:"noises",pron:"/ˈnɔɪzɪz/",es:"ruidos"},
+      {en:"as well as",pron:"",es:"tan bien como"},
+      {en:"have / HAVE replaces EAT and DRINK",pron:"",es:"HAVE reemplaza a eat y drink: 'have coffee' = beber café"}
+    ],
+    gramatica:[
+      {titulo:"COULD — pasado de CAN",
+       formula:"CAN → pasado → COULD\nThey COULDN'T DO MUCH. (no pudieron hacer mucho)\nThey COULD have done more. (podrían haber hecho más)\n\n(+) They could do it.\n(−) They couldn't do it.\n(?) Could they do it?",
+       ejemplos:["They couldn't do much because they were exhausted.","I couldn't sleep after the match.","Could you understand the press conference?"]},
+      {titulo:"AS WELL AS — tan bien como",
+       formula:"Argentina didn't play AS WELL AS Spain.\n= Argentina no jugó TAN BIEN COMO España.\n\nAS + adjetivo/adverbio + AS = comparación de igualdad",
+       ejemplos:["Argentina didn't play as well as Spain.","She speaks English as well as a native.","I don't run as fast as I used to."]},
+      {titulo:"GET USED TO — acostumbrarse a",
+       formula:"GET USED TO + sustantivo / verb-ING\nI GOT USED TO the noises of this new place.\nI GOT USED TO travelling a lot to work.\n\nBE USED TO = estar acostumbrado (estado)\nGET USED TO = acostumbrarse (proceso)",
+       ejemplos:["I got used to the noises of this new place.","I got used to travelling a lot to work.","We Argentines are used to winning."]}
+    ],
+    correcciones:[
+      {wrong:"they weren't make a lot becouse were exaustion",right:"They COULDN'T DO MUCH because they WERE EXHAUSTED."},
+      {wrong:"i think what the match of ingland they did all and to rest after match",right:"I think they DID THEIR BEST against England and DIDN'T HAVE ENERGY LEFT for this one."},
+      {wrong:"i got used to the more travel a the job",right:"I got used to TRAVELLING A LOT TO WORK."},
+      {wrong:"i am bit sad becouse the result",right:"I am A bit sad BECAUSE OF the result."},
+      {wrong:"he was very sad and go to finish fast",right:"He wanted TO FINISH fast. / He was very sad and wanted to leave."}
+    ],
+    frases:[
+      {en:"They couldn't do much because they were exhausted.",es:"No pudieron hacer mucho porque estaban agotados."},
+      {en:"They did their best against England.",es:"Dieron todo contra Inglaterra."},
+      {en:"They didn't have energy left for this one.",es:"No les quedó energía para este partido."},
+      {en:"Argentina didn't play as well as Spain.",es:"Argentina no jugó tan bien como España."},
+      {en:"I got used to the noises of this new place.",es:"Me acostumbré a los ruidos de este nuevo lugar."},
+      {en:"We Argentines are used to winning.",es:"Nosotros los argentinos estamos acostumbrados a ganar."},
+      {en:"Let's have a coffee. / I had pasta last night.",es:"Tomemos un café. / Comí pasta anoche. (HAVE reemplaza eat/drink)"},
+      {en:"How do you do?",es:"¿Cómo le va? (frase hecha formal)"}
+    ]
+  },
+  {
+    id:28, date:"2025-07-23", titulo:"Sol de vuelta, maneras de saludar y Past Simple en conversación",
+    vocab:[
+      {en:"gradually",pron:"/ˈɡrædʒuəli/",es:"gradualmente / poco a poco"},
+      {en:"higher and higher",pron:"",es:"cada vez más alto (temperatura)"},
+      {en:"over",pron:"",es:"terminado / acabado (the cold is OVER)"},
+      {en:"whole",pron:"/hoʊl/",es:"entero / completo"},
+      {en:"called",pron:"/kɔːld/",es:"llamado / se llama"},
+      {en:"cousin",pron:"/ˈkʌzɪn/",es:"primo/a"},
+      {en:"embarrassed",pron:"/ɪmˈbærəst/",es:"avergonzado/a (NOT embarazada)"},
+      {en:"pregnant",pron:"/ˈpreɡnənt/",es:"embarazada (NOT embarrassed)"},
+      {en:"stove",pron:"/stoʊv/",es:"aparato de cocina / cocina"},
+      {en:"burner / fire",pron:"",es:"hornalla"},
+      {en:"bookshelf / bookshelves",pron:"/ˈbʊkʃelf/",es:"biblioteca / estante de libros (plural irregular)"},
+      {en:"try",pron:"",es:"intentar (tried = pasado)"},
+      {en:"drums",pron:"/drʌmz/",es:"batería (instrumento)"},
+      {en:"drummer",pron:"/ˈdrʌmər/",es:"batero"},
+      {en:"reading out loud",pron:"",es:"leer en voz alta"},
+      {en:"ways",pron:"",es:"maneras / formas (NOT 'forms' para formas de decir algo)"}
+    ],
+    gramatica:[
+      {titulo:"7 maneras de preguntar '¿Cómo estás?'",
+       formula:"A) How are you?\nB) How are you doing?\nC) How do you do? (formal)\nD) How are things?\nE) How are things with you?\nF) How have you been?\nG) What's up? (muy informal)\nH) Is everything all right?",
+       ejemplos:["How are things with you these days?","How have you been since we last spoke?","What's up? (solo con amigos cercanos)"]},
+      {titulo:"Past Simple en conversación — preguntas y respuestas",
+       formula:"Where WERE you BORN? → I WAS BORN in Lanús.\nWERE you happy as a kid? → Yes, I WAS. / No, I WASN'T.\nDID you LIKE your house? → Yes, I DID. / No, I DIDN'T.\nDID you HAVE a nice bedroom? → Yes, I DID.",
+       ejemplos:["Where were you born? I was born in Lanús.","Were you happy when you were a kid? Yes, I was, because I had a united family.","Did you like your house then? Yes, I did, because it was big."]},
+      {titulo:"⚠ FALSE FRIENDS — embarazada ≠ embarrassed",
+       formula:"EMBARRASSED = avergonzado/a\nPREGNANT = embarazada\nPREGNANCY = embarazo\n\n¡Nunca digas 'I am embarrassed' queriendo decir 'estoy embarazada'!",
+       ejemplos:["I was embarrassed when I forgot the word. (me dio vergüenza)","She is pregnant — she's expecting a baby. (está embarazada)"]}
+    ],
+    correcciones:[
+      {wrong:"i am not remember",right:"I DON'T REMEMBER (Present Simple, no continuous)"},
+      {wrong:"i repet constantemente becouse i don't know",right:"I repeat CONSTANTLY because I DIDN'T KNOW (pasado simple)"},
+      {wrong:"bit a bit will go to up temperatura",right:"GRADUALLY, the temperature WILL GET HIGHER AND HIGHER."},
+      {wrong:"i remember three forms",right:"I remember three WAYS (not 'forms' para maneras de hablar)"},
+      {wrong:"yes, totally agree",right:"Yes, I TOTALLY AGREE. (no olvidar el sujeto)"}
+    ],
+    frases:[
+      {en:"How are things with you?",es:"¿Cómo van las cosas?"},
+      {en:"How have you been?",es:"¿Cómo estuviste?"},
+      {en:"Gradually, the temperature will get higher and higher.",es:"Gradualmente, la temperatura irá subiendo cada vez más."},
+      {en:"The extreme cold is over.",es:"El frío extremo terminó."},
+      {en:"Where were you born? I was born in Lanús.",es:"¿Dónde naciste? Nací en Lanús."},
+      {en:"I tried to learn to play the piano.",es:"Intenté aprender a tocar el piano."},
+      {en:"I prefer the drums.",es:"Prefiero la batería."},
+      {en:"Reading out loud helps a lot.",es:"Leer en voz alta ayuda mucho."},
+      {en:"I was embarrassed. (NOT 'embarazada')",es:"Me dio vergüenza. (embarazada = pregnant)"}
+    ]
   }
 ];
 
@@ -1199,5 +1383,286 @@ const GUIDES = [
         {label:"Contar historias (storytelling)",text:"Last week... / Last month... → La semana pasada... / El mes pasado...\nFirst, ... → Primero,...\nThen, ... → Luego,...\nFinally, ... → Finalmente,...\nIt was amazing/terrible because... → Fue increíble/terrible porque...\nI ended up... → Terminé..."}
       ]}
     ]
+  },
+  {
+    id:"irregular-verbs", emoji:"📝", title:"Verbos irregulares — Lista completa",
+    source:"Material de Euge", desc:"Los 100 verbos irregulares más importantes con base, pasado simple y participio. Preparado por Euge Zuran.",
+    sections:[
+      {title:"Cómo estudiarlos",items:[
+        {label:"¿Por qué son irregulares?",text:"Estos verbos NO siguen la regla del -ED en el pasado. Su forma pasada es propia y hay que memorizarla. Son los más usados en inglés, así que vale la pena aprenderlos bien."},
+        {label:"Las 3 columnas",text:"COLUMNA 1 (Base): la forma del diccionario, la que usás en Present Simple.\nCOLUMNA 2 (Past Simple): la que usás para decir algo que pasó ayer, la semana pasada, etc.\nCOLUMNA 3 (Past Participle): la que usás con HAVE/HAS (Present Perfect) o con WAS/WERE (pasiva)."},
+        {label:"Truco para aprenderlos",text:"Estudialos en grupos de 5-10 por día. Leélos en voz alta siempre. Usá el modo de práctica 'Verbos Irregulares' de esta app para hacer flashcards y quiz solo con estos verbos."}
+      ]},
+      {title:"Grupo A — B (los más usados)",items:[
+        {label:"be → was/were → been",text:"ser/estar — El más importante. I WAS tired. I have BEEN here."},
+        {label:"beat → beat → beaten",text:"golpear/vencer — We BEAT them 3-0."},
+        {label:"become → became → become",text:"convertirse en — She BECAME a doctor."},
+        {label:"begin → began → begun",text:"comenzar — The class BEGAN at 10."},
+        {label:"break → broke → broken",text:"romper — He BROKE the window."},
+        {label:"bring → brought → brought",text:"traer — She BROUGHT coffee."},
+        {label:"build → built → built",text:"construir — They BUILT a new house."},
+        {label:"buy → bought → bought",text:"comprar — I BOUGHT a new phone."}
+      ]},
+      {title:"Grupo C — F",items:[
+        {label:"catch → caught → caught",text:"atrapar — She CAUGHT the ball."},
+        {label:"choose → chose → chosen",text:"elegir — I CHOSE the red one."},
+        {label:"come → came → come",text:"venir — She CAME at 8."},
+        {label:"do → did → done",text:"hacer — What DID you do?"},
+        {label:"drink → drank → drunk",text:"beber — We DRANK wine."},
+        {label:"drive → drove → driven",text:"manejar — He DROVE to the office."},
+        {label:"eat → ate → eaten",text:"comer — I ATE asado yesterday."},
+        {label:"feel → felt → felt",text:"sentir — I FELT tired."},
+        {label:"find → found → found",text:"encontrar — I FOUND my keys."},
+        {label:"forget → forgot → forgotten",text:"olvidar — I FORGOT her name."}
+      ]},
+      {title:"Grupo G — L",items:[
+        {label:"get → got → got",text:"obtener/llegar — I GOT home late."},
+        {label:"give → gave → given",text:"dar — She GAVE me a book."},
+        {label:"go → went → gone/been",text:"ir — I WENT to the gym."},
+        {label:"have → had → had",text:"tener — I HAD breakfast at 8."},
+        {label:"hear → heard → heard",text:"escuchar — I HEARD the news."},
+        {label:"keep → kept → kept",text:"mantener — She KEPT her promise."},
+        {label:"know → knew → known",text:"saber/conocer — I KNEW the answer."},
+        {label:"leave → left → left",text:"irse/dejar — She LEFT at noon."},
+        {label:"lose → lost → lost",text:"perder — I LOST my wallet."}
+      ]},
+      {title:"Grupo M — S",items:[
+        {label:"make → made → made",text:"hacer/fabricar — I MADE a cake."},
+        {label:"meet → met → met",text:"conocer/reunirse — I MET her in Paris."},
+        {label:"pay → paid → paid",text:"pagar — I PAID the bill."},
+        {label:"read → read → read",text:"leer — I READ the book. (se pronuncia /red/)"},
+        {label:"run → ran → run",text:"correr — She RAN 5km."},
+        {label:"say → said → said",text:"decir — He SAID hello."},
+        {label:"see → saw → seen",text:"ver — I SAW a good movie."},
+        {label:"send → sent → sent",text:"enviar — I SENT the email."},
+        {label:"sing → sang → sung",text:"cantar — She SANG a beautiful song."},
+        {label:"sleep → slept → slept",text:"dormir — I SLEPT 8 hours."},
+        {label:"speak → spoke → spoken",text:"hablar — He SPOKE in English."},
+        {label:"spend → spent → spent",text:"gastar/pasar tiempo — I SPENT the weekend at home."},
+        {label:"stand → stood → stood",text:"estar de pie — I STOOD for an hour."},
+        {label:"steal → stole → stolen",text:"robar — Someone STOLE my bike."},
+        {label:"swim → swam → swum",text:"nadar — I SWAM for 30 minutes."}
+      ]},
+      {title:"Grupo T — W",items:[
+        {label:"take → took → taken",text:"tomar/llevar — I TOOK a taxi."},
+        {label:"teach → taught → taught",text:"enseñar — She TAUGHT English for 10 years."},
+        {label:"tell → told → told",text:"decir/contar — He TOLD me the truth."},
+        {label:"think → thought → thought",text:"pensar — I THOUGHT it was easy."},
+        {label:"throw → threw → thrown",text:"tirar — She THREW the ball."},
+        {label:"understand → understood → understood",text:"entender — I UNDERSTOOD the lesson."},
+        {label:"wake → woke → woken",text:"despertar — I WOKE up at 7."},
+        {label:"wear → wore → worn",text:"usar/llevar puesto — She WORE a red dress."},
+        {label:"win → won → won",text:"ganar — Argentina WON the World Cup."},
+        {label:"write → wrote → written",text:"escribir — She WROTE a novel."}
+      ]}
+    ]
+  },
+  {
+    id:"prepositions", emoji:"📍", title:"Preposiciones — IN / ON / BY / AT / OF / TO",
+    source:"Material de Euge", desc:"Cuándo usar cada preposición con reglas claras y ejemplos reales.",
+    sections:[
+      {title:"IN — dentro de / en (periodos largos)",items:[
+        {label:"Partes del día",text:"in the morning · in the evening · in the afternoon\n⚠ EXCEPCIÓN: at night (NO 'in the night')"},
+        {label:"Ciudades y países",text:"in Paris · in France · in Argentina · in Buenos Aires"},
+        {label:"Años",text:"in 2006 · in 2025 · in the 90s"},
+        {label:"Habitaciones y lugares cerrados",text:"in the kitchen · in the bathroom · in the church · in the hall · in the living room"},
+        {label:"Estaciones del año",text:"in winter · in summer · in spring · in autumn/fall"},
+        {label:"Frases clave",text:"I live in a flat in Liverpool.\nShe works in a bakery.\nHe lives in a village in the mountains.\nIn winter he teaches skiing.\nWe stay in a hotel."}
+      ]},
+      {title:"ON — sobre / en (superficie o días)",items:[
+        {label:"Días de la semana",text:"on Saturday · on Friday · on Monday · on Sunday"},
+        {label:"Partes de días específicos",text:"on Saturday mornings · on Friday evenings · on Monday afternoons"},
+        {label:"A pie",text:"on foot (= a pie)  →  I always go to the club on foot."},
+        {label:"Frases clave",text:"On Saturday I'm always tired.\nI go to work on foot."}
+      ]},
+      {title:"BY — por / en (transporte o autoría)",items:[
+        {label:"Medios de transporte",text:"by train · by bus · by car · by taxi · by ferry · by bike\n⚠ EXCEPCIÓN: on foot (a pie, no 'by foot')"},
+        {label:"Autoría",text:"written by · made by · created by\nThis is a book written by Shakespeare."},
+        {label:"Frases clave",text:"I go to work by bus.\nShe travels by train every week.\nThis film was directed by Spielberg."}
+      ]},
+      {title:"AT — en (punto exacto / hora)",items:[
+        {label:"Horas exactas",text:"at 8.30 · at ten o'clock · at noon · at midnight"},
+        {label:"Momentos del día",text:"at night · at the weekend"},
+        {label:"Lugares funcionales",text:"at home · at school · at work · at the station · at the airport"},
+        {label:"Frases clave",text:"He arrives at school at 8.30.\nI go to the gym at ten o'clock.\nI'm at International School of Languages.\nSomeone is at the door."}
+      ]},
+      {title:"OF — de (posesión o pertenencia)",items:[
+        {label:"Posesión",text:"a photo of my family · a friend of mine · a glass of wine"},
+        {label:"Pertenencia",text:"I'm at the International School of Languages.\nShe's a friend of hers."},
+        {label:"Truco",text:"En inglés el apóstrofe ('s) reemplaza muchas veces al OF:\nEuge's book = the book OF Euge"}
+      ]},
+      {title:"TO — a / hacia (destino o matrimonio)",items:[
+        {label:"Ir a algún lugar",text:"He catches the train to London.\nHe drives from his village to the centre.\nHe goes to the town by train."},
+        {label:"Escuchar",text:"We listen TO music. (NO 'listen music')"},
+        {label:"Matrimonio",text:"She is married TO an American. (NO 'married with')"},
+        {label:"⚠ Excepciones sin TO",text:"go HOME (no 'go to home')\ngo THERE (no 'go to there')\narrIVE home · arrive here"}
+      ]},
+      {title:"El truco del embudo: IN → ON → AT",items:[
+        {label:"Visualizalo así",text:"IN = el más grande (año, mes, país, ciudad, estación)\nON = el del medio (día específico, superficie)\nAT = el más pequeño (hora exacta, punto específico)"},
+        {label:"Ejemplos comparativos",text:"IN 2025 (año)\nIN June (mes)\nON Monday (día)\nON Monday morning (parte de un día)\nAT 8pm (hora exacta)\nAT school (punto específico)"},
+        {label:"Test rápido",text:"¿Cuándo usás cada una?\nin → algo que dura mucho tiempo o es un lugar grande\non → un día específico o una superficie\nat → una hora exacta o un punto preciso"}
+      ]}
+    ]
+  },
+  {
+    id:"verb-to-be", emoji:"🔤", title:"Verb To Be — Presente y Pasado",
+    source:"Material de Euge", desc:"La tabla completa con afirmación, negación y pregunta. Con ejemplos y ejercicios.",
+    sections:[
+      {title:"La tabla completa",items:[
+        {label:"I",text:"PRESENTE: am · PASADO: was\nI am right. / I'm not right. / Am I right?"},
+        {label:"YOU",text:"PRESENTE: are · PASADO: were\nYou are engaged. / You aren't engaged. / Are you engaged?"},
+        {label:"HE / SHE / IT",text:"PRESENTE: is · PASADO: was\nShe is married. / She isn't married. / Is she married?"},
+        {label:"WE",text:"PRESENTE: are · PASADO: were\nWe are workmates. / We aren't workmates. / Are we workmates?"},
+        {label:"THEY",text:"PRESENTE: are · PASADO: were\nThey were in the car. / They weren't in the car. / Were they in the car?"}
+      ]},
+      {title:"Presente — ejemplos completos",items:[
+        {label:"Afirmación (+)",text:"I am right. / You are engaged. / She is married. / We are workmates. / They are friends."},
+        {label:"Negación (−)",text:"I'm not right. / You aren't engaged. / She isn't married. / We aren't workmates. / They aren't friends."},
+        {label:"Pregunta (?)",text:"Am I right? / Are you engaged? / Is she married? / Are we workmates? / Are they friends?"},
+        {label:"Respuestas cortas",text:"Are you happy? → Yes, I am. / No, I'm not.\nIs she a teacher? → Yes, she is. / No, she isn't.\nAre they ready? → Yes, they are. / No, they aren't."}
+      ]},
+      {title:"Pasado — ejemplos completos",items:[
+        {label:"Afirmación (+)",text:"I was in London last March.\nYou were worried.\nShe was a good student.\nThey were in the car."},
+        {label:"Negación (−)",text:"I wasn't in London last March.\nYou weren't worried.\nShe wasn't a good student.\nThey weren't in the car."},
+        {label:"Pregunta (?)",text:"Was I right? / Were you worried? / Was she a good student? / Were they in the car?"},
+        {label:"Respuestas cortas",text:"Was I right? → Yes, you were. / No, you weren't.\nWere you shy? → Yes, I was. / No, I wasn't."}
+      ]},
+      {title:"Ejercicio — respondé estas preguntas",items:[
+        {label:"Con Verb To Be presente",text:"1. Are you happy with your job?\n2. Is your house the best place to relax for you?\n3. Are both of your parents from Argentina?\n4. Why is English important for you?\n5. Is Argentina a nice place to live in?\n6. Are you self-confident?"},
+        {label:"Con Verb To Be pasado",text:"7. Were you a good swimmer when you were a child?\n8. How far was it from your school to your house?\n9. Was your group of friends big or small when you were a kid?\n10. Were you shy when you were a kid?\n11. What was your favourite dessert then?\n12. Where were you yesterday night?"}
+      ]}
+    ]
   }
+];
+
+// ─── VERBOS IRREGULARES ──────────────────────────────────────────────────────
+const IRREGULAR_VERBS = [
+  {base:"be",past:"was/were",participle:"been",es:"ser/estar"},
+  {base:"beat",past:"beat",participle:"beaten",es:"golpear/vencer"},
+  {base:"become",past:"became",participle:"become",es:"convertirse en"},
+  {base:"begin",past:"began",participle:"begun",es:"comenzar"},
+  {base:"bend",past:"bent",participle:"bent",es:"doblar"},
+  {base:"bite",past:"bit",participle:"bitten",es:"morder"},
+  {base:"blow",past:"blew",participle:"blown",es:"soplar"},
+  {base:"break",past:"broke",participle:"broken",es:"romper"},
+  {base:"bring",past:"brought",participle:"brought",es:"traer"},
+  {base:"build",past:"built",participle:"built",es:"construir"},
+  {base:"burn",past:"burned/burnt",participle:"burned/burnt",es:"quemar"},
+  {base:"burst",past:"burst",participle:"burst",es:"estallar"},
+  {base:"buy",past:"bought",participle:"bought",es:"comprar"},
+  {base:"can",past:"could",participle:"been able",es:"poder"},
+  {base:"catch",past:"caught",participle:"caught",es:"atrapar"},
+  {base:"choose",past:"chose",participle:"chosen",es:"elegir"},
+  {base:"come",past:"came",participle:"come",es:"venir"},
+  {base:"cost",past:"cost",participle:"cost",es:"costar"},
+  {base:"cut",past:"cut",participle:"cut",es:"cortar"},
+  {base:"dig",past:"dug",participle:"dug",es:"cavar"},
+  {base:"do",past:"did",participle:"done",es:"hacer"},
+  {base:"draw",past:"drew",participle:"drawn",es:"dibujar"},
+  {base:"dream",past:"dreamed/dreamt",participle:"dreamed/dreamt",es:"soñar"},
+  {base:"drink",past:"drank",participle:"drunk",es:"beber"},
+  {base:"drive",past:"drove",participle:"driven",es:"manejar"},
+  {base:"eat",past:"ate",participle:"eaten",es:"comer"},
+  {base:"fall",past:"fell",participle:"fallen",es:"caer"},
+  {base:"feed",past:"fed",participle:"fed",es:"alimentar"},
+  {base:"feel",past:"felt",participle:"felt",es:"sentir"},
+  {base:"fight",past:"fought",participle:"fought",es:"pelear"},
+  {base:"find",past:"found",participle:"found",es:"encontrar"},
+  {base:"fly",past:"flew",participle:"flown",es:"volar"},
+  {base:"forget",past:"forgot",participle:"forgotten",es:"olvidar"},
+  {base:"forgive",past:"forgave",participle:"forgiven",es:"perdonar"},
+  {base:"get",past:"got",participle:"got",es:"obtener/llegar"},
+  {base:"give",past:"gave",participle:"given",es:"dar"},
+  {base:"go",past:"went",participle:"gone/been",es:"ir"},
+  {base:"grow",past:"grew",participle:"grown",es:"crecer"},
+  {base:"hang",past:"hung",participle:"hanged/hung",es:"colgar"},
+  {base:"have",past:"had",participle:"had",es:"tener"},
+  {base:"hear",past:"heard",participle:"heard",es:"escuchar"},
+  {base:"hide",past:"hid",participle:"hidden",es:"esconder"},
+  {base:"hit",past:"hit",participle:"hit",es:"golpear"},
+  {base:"hold",past:"held",participle:"held",es:"sostener"},
+  {base:"hurt",past:"hurt",participle:"hurt",es:"lastimar"},
+  {base:"keep",past:"kept",participle:"kept",es:"mantener"},
+  {base:"kneel",past:"knelt",participle:"knelt",es:"arrodillarse"},
+  {base:"know",past:"knew",participle:"known",es:"saber/conocer"},
+  {base:"lay",past:"laid",participle:"laid",es:"poner/colocar"},
+  {base:"lead",past:"led",participle:"led",es:"liderar"},
+  {base:"learn",past:"learned/learnt",participle:"learned/learnt",es:"aprender"},
+  {base:"leave",past:"left",participle:"left",es:"irse/dejar"},
+  {base:"lend",past:"lent",participle:"lent",es:"prestar"},
+  {base:"let",past:"let",participle:"let",es:"dejar/permitir"},
+  {base:"lie",past:"lay",participle:"lain",es:"acostarse/mentir"},
+  {base:"light",past:"lit",participle:"lit",es:"encender"},
+  {base:"lose",past:"lost",participle:"lost",es:"perder"},
+  {base:"make",past:"made",participle:"made",es:"hacer/fabricar"},
+  {base:"mean",past:"meant",participle:"meant",es:"significar"},
+  {base:"meet",past:"met",participle:"met",es:"conocer/reunirse"},
+  {base:"must",past:"had to",participle:"had to",es:"deber"},
+  {base:"pay",past:"paid",participle:"paid",es:"pagar"},
+  {base:"put",past:"put",participle:"put",es:"poner"},
+  {base:"read",past:"read/red",participle:"read/red",es:"leer"},
+  {base:"ride",past:"rode",participle:"ridden",es:"montar"},
+  {base:"ring",past:"rang",participle:"rung",es:"sonar/llamar"},
+  {base:"rise",past:"rose",participle:"risen",es:"levantarse/subir"},
+  {base:"run",past:"ran",participle:"run",es:"correr"},
+  {base:"say",past:"said",participle:"said",es:"decir"},
+  {base:"see",past:"saw",participle:"seen",es:"ver"},
+  {base:"sell",past:"sold",participle:"sold",es:"vender"},
+  {base:"send",past:"sent",participle:"sent",es:"enviar"},
+  {base:"set",past:"set",participle:"set",es:"establecer/poner"},
+  {base:"shake",past:"shook",participle:"shaken",es:"sacudir"},
+  {base:"shine",past:"shone",participle:"shone",es:"brillar"},
+  {base:"shoot",past:"shot",participle:"shot",es:"disparar"},
+  {base:"show",past:"showed",participle:"shown",es:"mostrar"},
+  {base:"shut",past:"shut",participle:"shut",es:"cerrar"},
+  {base:"sing",past:"sang",participle:"sung",es:"cantar"},
+  {base:"sink",past:"sank",participle:"sunk",es:"hundir"},
+  {base:"sit",past:"sat",participle:"sat",es:"sentarse"},
+  {base:"sleep",past:"slept",participle:"slept",es:"dormir"},
+  {base:"slide",past:"slid",participle:"slid",es:"deslizar"},
+  {base:"smell",past:"smelled/smelt",participle:"smelled/smelt",es:"oler"},
+  {base:"speak",past:"spoke",participle:"spoken",es:"hablar"},
+  {base:"spend",past:"spent",participle:"spent",es:"gastar/pasar tiempo"},
+  {base:"spill",past:"spilled/spilt",participle:"spilled/spilt",es:"derramar"},
+  {base:"spoil",past:"spoiled/spoilt",participle:"spoiled/spoilt",es:"arruinar/malcriar"},
+  {base:"stand",past:"stood",participle:"stood",es:"estar de pie"},
+  {base:"steal",past:"stole",participle:"stolen",es:"robar"},
+  {base:"stick",past:"stuck",participle:"stuck",es:"pegar/atascarse"},
+  {base:"swim",past:"swam",participle:"swum",es:"nadar"},
+  {base:"take",past:"took",participle:"taken",es:"tomar/llevar"},
+  {base:"teach",past:"taught",participle:"taught",es:"enseñar"},
+  {base:"tear",past:"tore",participle:"torn",es:"desgarrar"},
+  {base:"tell",past:"told",participle:"told",es:"decir/contar"},
+  {base:"think",past:"thought",participle:"thought",es:"pensar"},
+  {base:"throw",past:"threw",participle:"thrown",es:"tirar"},
+  {base:"understand",past:"understood",participle:"understood",es:"entender"},
+  {base:"wake",past:"woke",participle:"woken",es:"despertar"},
+  {base:"wear",past:"wore",participle:"worn",es:"usar/llevar puesto"},
+  {base:"win",past:"won",participle:"won",es:"ganar"},
+  {base:"write",past:"wrote",participle:"written",es:"escribir"}
+];
+
+// ─── PREPOSICIONES ────────────────────────────────────────────────────────────
+const PREPOSITIONS = [
+  {prep:"IN",uso:"Partes del día",ejemplo:"in the morning, in the evening",es:"en la mañana, en la tarde"},
+  {prep:"IN",uso:"Ciudades y países",ejemplo:"in Paris, in France, in Argentina",es:"en París, en Francia"},
+  {prep:"IN",uso:"Años",ejemplo:"in 2006, in 2025",es:"en 2006, en 2025"},
+  {prep:"IN",uso:"Habitaciones y lugares",ejemplo:"in the kitchen, in the bathroom, in the church",es:"en la cocina, en el baño, en la iglesia"},
+  {prep:"IN",uso:"Estaciones del año",ejemplo:"in winter, in summer, in spring, in autumn",es:"en invierno, en verano, en primavera, en otoño"},
+  {prep:"IN",uso:"Frase ejemplo",ejemplo:"I live in a flat in Liverpool.",es:"Vivo en un departamento en Liverpool."},
+  {prep:"ON",uso:"Días de la semana",ejemplo:"on Saturday, on Friday, on Monday",es:"el sábado, el viernes, el lunes"},
+  {prep:"ON",uso:"Partes de días específicos",ejemplo:"on Saturday mornings, on Friday evenings",es:"las mañanas del sábado, las tardes del viernes"},
+  {prep:"ON",uso:"Transporte a pie",ejemplo:"on foot (a pie)",es:"a pie"},
+  {prep:"ON",uso:"Frase ejemplo",ejemplo:"On Saturday I'm always tired.",es:"El sábado siempre estoy cansado."},
+  {prep:"BY",uso:"Medios de transporte",ejemplo:"by train, by bus, by car, by taxi, by ferry, by bike",es:"en tren, en colectivo, en auto, en taxi, en ferry, en bici"},
+  {prep:"BY",uso:"Autor de una acción",ejemplo:"This is a book written by William Shakespeare.",es:"Este es un libro escrito por William Shakespeare."},
+  {prep:"AT",uso:"Horas exactas",ejemplo:"at 8.30, at ten o'clock",es:"a las 8.30, a las diez"},
+  {prep:"AT",uso:"Momentos del día",ejemplo:"at night, at the weekend",es:"de noche, el fin de semana"},
+  {prep:"AT",uso:"Lugares funcionales",ejemplo:"at home, at school, at work",es:"en casa, en la escuela, en el trabajo"},
+  {prep:"AT",uso:"Frase ejemplo",ejemplo:"He arrives at school at 8.30.",es:"Él llega a la escuela a las 8.30."},
+  {prep:"OF",uso:"Posesión",ejemplo:"This is a photo of my family.",es:"Esta es una foto de mi familia."},
+  {prep:"OF",uso:"Pertenencia",ejemplo:"She's a friend of mine.",es:"Es una amiga mía."},
+  {prep:"TO",uso:"Matrimonio",ejemplo:"She is married to an American. (NOT 'with')",es:"Ella está casada con un americano."},
+  {prep:"TO",uso:"Ir a algún lugar",ejemplo:"He catches the train to London.",es:"Él toma el tren a Londres."},
+  {prep:"TO",uso:"Escuchar",ejemplo:"We listen to music.",es:"Escuchamos música."},
 ];
