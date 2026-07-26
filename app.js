@@ -1,12 +1,27 @@
 // ─── DB ──────────────────────────────────────────────────────────────────────
 const KEY = 'miingles_v5';
+const DATA_VERSION = '2026-07-28'; // bump this when INITIAL_CLASSES changes
+
 function dbLoad() {
-  try { const r = localStorage.getItem(KEY); if (r) return JSON.parse(r); } catch(e) {}
-  return { classes: JSON.parse(JSON.stringify(INITIAL_CLASSES)), errors: [], unknowns: [] };
+  try {
+    const r = localStorage.getItem(KEY);
+    if (r) {
+      const parsed = JSON.parse(r);
+      // If saved data version doesn't match or has fewer classes, reset
+      if (parsed._version !== DATA_VERSION || (parsed.classes||[]).length < INITIAL_CLASSES.length) {
+        const fresh = { classes: JSON.parse(JSON.stringify(INITIAL_CLASSES)), errors: parsed.errors||[], unknowns: parsed.unknowns||[], quizWrong: parsed.quizWrong||[], _version: DATA_VERSION };
+        localStorage.setItem(KEY, JSON.stringify(fresh));
+        return fresh;
+      }
+      return parsed;
+    }
+  } catch(e) {}
+  return { classes: JSON.parse(JSON.stringify(INITIAL_CLASSES)), errors: [], unknowns: [], quizWrong: [], _version: DATA_VERSION };
 }
-function dbSave(db) { localStorage.setItem(KEY, JSON.stringify(db)); }
+function dbSave(db) { db._version = DATA_VERSION; localStorage.setItem(KEY, JSON.stringify(db)); }
 let DB = dbLoad();
 if (!DB.unknowns) DB.unknowns = [];
+if (!DB.quizWrong) DB.quizWrong = [];
 
 // ─── PRACTICE POOL: vocab + frases ───────────────────────────────────────────
 function getPracticePool() {
@@ -82,7 +97,6 @@ function updateSidebar() {
       <div class="sb-cls-name">${cl.titulo}</div>
     </div>`).join('');
 }
-
 function updateCounts() {
   document.getElementById('cnt-classes').textContent = DB.classes.length;
   document.getElementById('cnt-vocab').textContent = DB.classes.flatMap(c=>c.vocab||[]).length;
