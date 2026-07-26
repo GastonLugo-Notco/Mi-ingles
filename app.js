@@ -65,6 +65,8 @@ function render() {
     phrases:   ['Frases útiles',          renderPhrases],
     flashcards:['Flashcards',             renderFlashcards],
     quiz:      ['Quiz',                   renderQuiz],
+    irregular: ['Verbos irregulares',     renderIrregular],
+    prepquiz:  ['Preposiciones',          renderPrepQuiz],
   };
   const [t, fn] = map[VIEW] || map.home;
   title.textContent = t;
@@ -554,3 +556,208 @@ CHAT:\n${chatText}`;
 function fmtD(d){const[y,m,day]=d.split('-');const ms=['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];return`${parseInt(day)} ${ms[parseInt(m)-1]} ${y}`;}
 function esc(s){return(s||'').replace(/'/g,"\\'");}
 function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800);}
+
+// ─── IRREGULAR VERBS PRACTICE ─────────────────────────────────────────────────
+function renderIrregular(pg) {
+  if(!PS||PS.view!=='irr') {
+    pg.innerHTML=`<div class="practice-wrap">
+      <p style="font-size:13px;color:var(--ink3);margin-bottom:6px"><strong>${IRREGULAR_VERBS.length} verbos irregulares</strong> de la lista de Euge.</p>
+      <p style="font-size:13px;color:var(--ink3);margin-bottom:20px">Practicá los tres tiempos: base, pasado simple y participio.</p>
+      <div class="mode-grid">
+        <div class="mode-card" onclick="startIrr('base-past')">
+          <div class="mc-icon">📝</div>
+          <div class="mc-name">Base → Pasado</div>
+          <div class="mc-desc">Ves el verbo en base y recordás el Past Simple.</div>
+        </div>
+        <div class="mode-card" onclick="startIrr('past-base')">
+          <div class="mc-icon">🔄</div>
+          <div class="mc-name">Pasado → Base</div>
+          <div class="mc-desc">Ves el Past Simple y recordás el verbo base.</div>
+        </div>
+        <div class="mode-card" onclick="startIrr('base-part')">
+          <div class="mc-icon">⭐</div>
+          <div class="mc-name">Base → Participio</div>
+          <div class="mc-desc">Ves el verbo base y recordás el Past Participle.</div>
+        </div>
+        <div class="mode-card" onclick="startIrr('quiz-irr')">
+          <div class="mc-icon">🎯</div>
+          <div class="mc-name">Quiz de irregulares</div>
+          <div class="mc-desc">4 opciones — ¿Cuál es el pasado simple?</div>
+        </div>
+      </div>
+      <div style="margin-top:16px;background:var(--teal-bg);border-left:3px solid var(--teal);border-radius:0 8px 8px 0;padding:10px 14px;font-size:12px;line-height:1.6">
+        <strong style="color:var(--teal)">Truco:</strong> Empezá por los más usados — go/went, come/came, have/had, do/did, see/saw, get/got, say/said, make/made, know/knew, think/thought.
+      </div>
+    </div>`;
+    return;
+  }
+
+  const {cards,idx,score,mode} = PS;
+
+  if(mode==='quiz-irr') {
+    if(idx>=cards.length){
+      const pct=Math.round((score/cards.length)*100);
+      pg.innerHTML=`<div class="practice-wrap"><div class="score-wrap">
+        <div class="score-big">${pct}%</div>
+        <h3 style="font-size:20px;font-weight:800;margin:12px 0 5px">${pct>=70?'¡Muy bien!':'Seguí practicando'}</h3>
+        <p class="score-sub">Acertaste ${score} de ${cards.length} verbos</p>
+        <div style="display:flex;gap:10px;justify-content:center;margin-top:20px;flex-wrap:wrap">
+          <button class="btn ghost" onclick="PS=null;renderIrregular(document.getElementById('page'))">← Volver</button>
+          <button class="btn teal" onclick="startIrr('quiz-irr')">Repetir</button>
+        </div></div></div>`; return;
+    }
+    const card=cards[idx];
+    const dist=IRREGULAR_VERBS.filter(v=>v!==card).sort(()=>Math.random()-.5).slice(0,3);
+    const opts=[...dist.map(v=>v.past),card.past].sort(()=>Math.random()-.5);
+    pg.innerHTML=`<div class="practice-wrap">
+      <div class="prog-bar"><div class="prog-fill" style="width:${(idx/cards.length)*100}%"></div></div>
+      <p class="prog-txt">${idx+1} de ${cards.length} · ✅ ${score}</p>
+      <div class="quiz-card">
+        <div style="font-size:11px;color:var(--ink3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">¿Cuál es el Past Simple de...?</div>
+        <div class="quiz-q"><strong>"${card.base.toUpperCase()}"</strong> <span style="font-size:14px;color:var(--ink3);font-weight:400">(${card.es})</span></div>
+        <div class="quiz-opts">${opts.map(o=>`<button class="quiz-opt" onclick="answerIrr(this,'${esc(o)}','${esc(card.past)}')">${o}</button>`).join('')}</div>
+      </div>
+      <div style="text-align:center;margin-top:14px">
+        <button class="btn ghost sm" onclick="PS=null;renderIrregular(document.getElementById('page'))">← Salir</button>
+      </div></div>`;
+    return;
+  }
+
+  // Flashcard mode
+  if(idx>=cards.length){
+    pg.innerHTML=`<div class="practice-wrap"><div class="score-wrap">
+      <div class="score-big">✓</div>
+      <h3 style="font-size:20px;font-weight:800;margin:12px 0 5px">¡Repasaste todo!</h3>
+      <p class="score-sub">${cards.length} verbos · ${score} los sabías</p>
+      <div style="display:flex;gap:10px;justify-content:center;margin-top:20px">
+        <button class="btn ghost" onclick="PS=null;renderIrregular(document.getElementById('page'))">← Volver</button>
+        <button class="btn teal" onclick="startIrr('${mode}')">Repetir</button>
+      </div></div></div>`; return;
+  }
+
+  const card=cards[idx];
+  const q = mode==='past-base' ? card.past : card.base;
+  const a = mode==='past-base' ? card.base : mode==='base-part' ? card.participle : card.past;
+  const hint = mode==='past-base' ? 'Past Simple → Base' : mode==='base-part' ? 'Base → Past Participle' : 'Base → Past Simple';
+
+  pg.innerHTML=`<div class="practice-wrap">
+    <div class="prog-bar"><div class="prog-fill" style="width:${(idx/cards.length)*100}%"></div></div>
+    <p class="prog-txt">${idx+1} de ${cards.length}</p>
+    <div class="flashcard" id="fcc" onclick="flipFC()">
+      <div class="fc-hint">${hint}</div>
+      <div class="fc-word">${q.toUpperCase()}</div>
+      <div style="font-size:13px;color:var(--ink3);margin-top:4px">${card.es}</div>
+      <div class="fc-ans" id="fca">${a.toUpperCase()}</div>
+      ${mode!=='past-base'?`<div class="fc-pron" id="fcp" style="font-size:11px;color:var(--ink3)">base: ${card.base} · pasado: ${card.past} · participio: ${card.participle}</div>`:''}
+      <div class="fc-tap">Tocá para ver →</div>
+    </div>
+    <div class="fc-btns" id="fcact" style="display:none">
+      <button class="fc-bad" onclick="nextIrr(false)">😕 No lo sabía</button>
+      <button class="fc-good" onclick="nextIrr(true)">😊 Lo sabía</button>
+    </div>
+    <div style="text-align:center;margin-top:14px">
+      <button class="btn ghost sm" onclick="PS=null;renderIrregular(document.getElementById('page'))">← Salir</button>
+    </div></div>`;
+}
+
+function startIrr(mode){
+  PS={view:'irr',mode,cards:[...IRREGULAR_VERBS].sort(()=>Math.random()-.5),idx:0,score:0};
+  renderIrregular(document.getElementById('page'));
+}
+function nextIrr(k){if(k)PS.score++;PS.idx++;renderIrregular(document.getElementById('page'));}
+function answerIrr(btn,chosen,correct){
+  document.querySelectorAll('.quiz-opt').forEach(b=>{b.classList.add('disabled');b.onclick=null;if(b.textContent.trim()===correct)b.classList.add('correct');});
+  if(chosen===correct){btn.classList.add('correct');PS.score++;}else btn.classList.add('wrong');
+  setTimeout(()=>{PS.idx++;renderIrregular(document.getElementById('page'));},1300);
+}
+
+// ─── PREPOSITIONS QUIZ ────────────────────────────────────────────────────────
+function renderPrepQuiz(pg) {
+  if(!PS||PS.view!=='prep') {
+    pg.innerHTML=`<div class="practice-wrap">
+      <p style="font-size:13px;color:var(--ink3);margin-bottom:6px"><strong>${PREPOSITIONS.length} usos de preposiciones</strong> — IN, ON, BY, AT, OF, TO.</p>
+      <p style="font-size:13px;color:var(--ink3);margin-bottom:20px">Practicá cuándo usar cada una con ejemplos reales.</p>
+      <div class="mode-grid">
+        <div class="mode-card" onclick="startPrep('flash')">
+          <div class="mc-icon">📍</div>
+          <div class="mc-name">Flashcards</div>
+          <div class="mc-desc">Ves el ejemplo y recordás qué preposición va.</div>
+        </div>
+        <div class="mode-card" onclick="startPrep('quiz')">
+          <div class="mc-icon">🎯</div>
+          <div class="mc-name">Quiz</div>
+          <div class="mc-desc">¿IN, ON, AT, BY, OF o TO? Elegí la correcta.</div>
+        </div>
+      </div>
+      <div style="margin-top:16px;background:var(--amber-bg);border-left:3px solid var(--amber);border-radius:0 8px 8px 0;padding:10px 14px;font-size:12px;line-height:1.6">
+        <strong style="color:var(--amber)">El truco del embudo:</strong> IN = periodo largo / ON = día específico / AT = hora exacta o punto preciso
+      </div>
+    </div>`;
+    return;
+  }
+
+  const {cards,idx,score,mode} = PS;
+
+  if(idx>=cards.length){
+    const pct=Math.round((score/cards.length)*100);
+    pg.innerHTML=`<div class="practice-wrap"><div class="score-wrap">
+      <div class="score-big">${mode==='quiz'?pct+'%':'✓'}</div>
+      <h3 style="font-size:20px;font-weight:800;margin:12px 0 5px">${mode==='quiz'&&pct>=70?'¡Muy bien!':mode==='quiz'?'Seguí practicando':'¡Repasaste todo!'}</h3>
+      <p class="score-sub">${mode==='quiz'?`Acertaste ${score} de ${cards.length}`:`${cards.length} tarjetas completadas`}</p>
+      <div style="display:flex;gap:10px;justify-content:center;margin-top:20px">
+        <button class="btn ghost" onclick="PS=null;renderPrepQuiz(document.getElementById('page'))">← Volver</button>
+        <button class="btn teal" onclick="startPrep('${mode}')">Repetir</button>
+      </div></div></div>`; return;
+  }
+
+  const card=cards[idx];
+
+  if(mode==='quiz'){
+    const allPreps=['IN','ON','BY','AT','OF','TO'];
+    const wrong=allPreps.filter(p=>p!==card.prep).sort(()=>Math.random()-.5).slice(0,3);
+    const opts=[...wrong,card.prep].sort(()=>Math.random()-.5);
+    pg.innerHTML=`<div class="practice-wrap">
+      <div class="prog-bar"><div class="prog-fill" style="width:${(idx/cards.length)*100}%"></div></div>
+      <p class="prog-txt">${idx+1} de ${cards.length} · ✅ ${score}</p>
+      <div class="quiz-card">
+        <div style="font-size:11px;color:var(--ink3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">¿Qué preposición va?</div>
+        <div class="quiz-q" style="font-size:17px">"___ ${card.ejemplo.replace(card.prep.toLowerCase()+'','').trim()}"</div>
+        <div style="font-size:12px;color:var(--ink3);margin-bottom:18px">Uso: ${card.uso}</div>
+        <div class="quiz-opts">${opts.map(o=>`<button class="quiz-opt" style="font-size:16px;font-weight:800;text-align:center" onclick="answerPrep(this,'${o}','${card.prep}')">${o}</button>`).join('')}</div>
+      </div>
+      <div style="text-align:center;margin-top:14px">
+        <button class="btn ghost sm" onclick="PS=null;renderPrepQuiz(document.getElementById('page'))">← Salir</button>
+      </div></div>`;
+    return;
+  }
+
+  // Flash mode
+  pg.innerHTML=`<div class="practice-wrap">
+    <div class="prog-bar"><div class="prog-fill" style="width:${(idx/cards.length)*100}%"></div></div>
+    <p class="prog-txt">${idx+1} de ${cards.length}</p>
+    <div class="flashcard" id="fcc" onclick="flipFC()">
+      <div class="fc-hint">¿Qué preposición va?</div>
+      <div class="fc-word" style="font-size:18px;text-align:center;line-height:1.5">${card.uso}<br><span style="font-size:14px;color:var(--ink3);font-weight:400">"${card.ejemplo}"</span></div>
+      <div class="fc-ans" id="fca" style="font-size:28px">${card.prep}</div>
+      <div class="fc-pron" id="fcp" style="font-size:12px;color:var(--ink3)">${card.es}</div>
+      <div class="fc-tap">Tocá para ver →</div>
+    </div>
+    <div class="fc-btns" id="fcact" style="display:none">
+      <button class="fc-bad" onclick="nextPrep(false)">😕 No la sabía</button>
+      <button class="fc-good" onclick="nextPrep(true)">😊 La sabía</button>
+    </div>
+    <div style="text-align:center;margin-top:14px">
+      <button class="btn ghost sm" onclick="PS=null;renderPrepQuiz(document.getElementById('page'))">← Salir</button>
+    </div></div>`;
+}
+
+function startPrep(mode){
+  PS={view:'prep',mode,cards:[...PREPOSITIONS].sort(()=>Math.random()-.5),idx:0,score:0};
+  renderPrepQuiz(document.getElementById('page'));
+}
+function nextPrep(k){if(k)PS.score++;PS.idx++;renderPrepQuiz(document.getElementById('page'));}
+function answerPrep(btn,chosen,correct){
+  document.querySelectorAll('.quiz-opt').forEach(b=>{b.classList.add('disabled');b.onclick=null;if(b.textContent.trim()===correct)b.classList.add('correct');});
+  if(chosen===correct){btn.classList.add('correct');PS.score++;}else btn.classList.add('wrong');
+  setTimeout(()=>{PS.idx++;renderPrepQuiz(document.getElementById('page'));},1300);
+}
