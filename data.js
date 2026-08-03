@@ -969,6 +969,148 @@ const INITIAL_CLASSES = [
       {en:"Reading out loud helps a lot.",es:"Leer en voz alta ayuda mucho."},
       {en:"I was embarrassed. (NOT 'embarazada')",es:"Me dio vergüenza. (embarazada = pregnant)"}
     ]
+  },
+  {
+    id:29, date:"2026-07-28", titulo:"Rita la perra, pronombres posesivos y futuro con WILL",
+    vocab:[
+      {en:"mine",pron:"/maɪn/",es:"mío/mía (pronombre posesivo)"},
+      {en:"yours",pron:"/jɔːrz/",es:"tuyo/tuya"},
+      {en:"hers",pron:"/hɜːrz/",es:"de ella"},
+      {en:"his",pron:"/hɪz/",es:"de él"},
+      {en:"ours",pron:"/aʊərz/",es:"nuestro/nuestra"},
+      {en:"theirs",pron:"/ðeərz/",es:"de ellos/ellas"},
+      {en:"taking care of",pron:"",es:"cuidando / haciéndose cargo de"},
+      {en:"get back home",pron:"",es:"volver a casa"},
+      {en:"on holidays",pron:"",es:"de vacaciones"},
+      {en:"one time per year",pron:"",es:"una vez por año"},
+      {en:"upside-down",pron:"",es:"al revés / boca abajo"},
+      {en:"personality",pron:"/ˌpɜːrsəˈnæləti/",es:"personalidad"},
+      {en:"favourite animal",pron:"",es:"animal favorito"}
+    ],
+    gramatica:[
+      {titulo:"Pronombres posesivos — MINE / YOURS / HERS...",
+       formula:"Adjetivo posesivo + sustantivo  →  Pronombre posesivo (solo)\nMY dog → It is MINE.\nHER dog → It is HERS.\nYOUR dog → It is YOURS.\nHIS dog → It is HIS.\nOUR dog → It is OURS.\nTHEIR dog → It is THEIRS.",
+       ejemplos:["It is not MINE. It is a friend's.","Is this your bag? Yes, it's MINE.","That dog is HERS, not mine."]},
+      {titulo:"Futuro con WILL — sujeto y estructura correcta",
+       formula:"NEXT Sunday she WILL GET BACK HOME.\n(NOT 'her will go house')\n\n⚠ Sujeto: SHE (no 'her')\nVerbo: will + base form\nLugar: get back HOME / at home",
+       ejemplos:["Next Sunday she will get back home.","She will take holidays one time this year.","I will take care of her until Sunday."]}
+    ],
+    correcciones:[
+      {wrong:"i am today wich big friend",right:"I am today WITH A big friend."},
+      {wrong:"not is Rita is one friend",right:"It is not MINE. It is A FRIEND'S."},
+      {wrong:"i am taking care is her in my house",right:"I am taking care OF HER in my house."},
+      {wrong:"sunday her will go house",right:"NEXT Sunday SHE WILL GET BACK HOME."},
+      {wrong:"not is a lot time",right:"It is NOT A LOT OF TIME."},
+      {wrong:"is my animal prefer",right:"It is MY FAVOURITE ANIMAL."},
+      {wrong:"she take holidays one per year",right:"She TAKES holidays ONE TIME per year."},
+      {wrong:"i am very happy it is in my house",right:"I am very happy TO HAVE HER at home."}
+    ],
+    frases:[
+      {en:"It is not mine. It is a friend's.",es:"No es mío. Es de una amiga."},
+      {en:"I am taking care of her in my house.",es:"La estoy cuidando en mi casa."},
+      {en:"Next Sunday she will get back home.",es:"El próximo domingo volverá a su casa."},
+      {en:"She takes holidays one time per year.",es:"Ella se toma vacaciones una vez por año."},
+      {en:"I am very happy to have her at home.",es:"Estoy muy feliz de tenerla en casa."},
+      {en:"Is it yours or are you taking care of her?",es:"¿Es tuya o la estás cuidando?"},
+      {en:"It is my favourite animal.",es:"Es mi animal favorito."}
+    ]
+  },
+  {
+    id:30, date:"2026-07-30", titulo:"Paseos con Rita, BE USED TO y vocabulario cotidiano",
+    vocab:[
+      {en:"training / my training",pron:"",es:"entrenamiento (NOT 'my trained')"},
+      {en:"a walk round the square",pron:"",es:"una vuelta a la manzana"},
+      {en:"is not used to",pron:"",es:"no está acostumbrada a"},
+      {en:"trainer",pron:"/ˈtreɪnər/",es:"entrenador/a"},
+      {en:"a twenty-minute walk",pron:"",es:"una caminata de 20 minutos"},
+      {en:"not yet",pron:"/nɒt jet/",es:"todavía no"},
+      {en:"such is life",pron:"",es:"así es la vida"},
+      {en:"kind of / sort of / type of",pron:"",es:"tipo de (los tres son sinónimos)"},
+      {en:"ginger",pron:"/ˈdʒɪndʒər/",es:"jengibre"},
+      {en:"hard eggs",pron:"",es:"huevos duros"},
+      {en:"lagoon",pron:"/ləˈɡuːn/",es:"laguna"},
+      {en:"for that reason",pron:"",es:"por esa razón"},
+      {en:"it is a very quiet place",pron:"",es:"es un lugar muy tranquilo"}
+    ],
+    gramatica:[
+      {titulo:"BE USED TO — estar acostumbrado (estado)",
+       formula:"BE USED TO + sustantivo / verb-ING\nShe IS NOT USED TO the walks.\nI AM USED TO waking up early.\nI'M USED TO it. (estoy acostumbrado a eso)\n\n⚠ Diferencia:\nBE USED TO = ya estoy acostumbrado (estado)\nGET USED TO = me estoy acostumbrando (proceso)",
+       ejemplos:["She is not used to going for walks.","I'm used to training in the morning.","Don't worry, you'll get used to it."]},
+      {titulo:"HOW vs WHO",
+       formula:"HOW = cómo (manera)\nWHO = quién (persona)\n\nHow DO you DO? / How ARE you DOING?\nWho told you that?",
+       ejemplos:["How long are you out with Rita?","Who is taking care of the dog?","How do you feel about it?"]}
+    ],
+    correcciones:[
+      {wrong:"How are you do?",right:"How DO you DO? / How ARE you DOING?"},
+      {wrong:"my trained in the morning was to go laps to rita",right:"My TRAINING in the morning was MAKING A WALK ROUND THE SQUARE."},
+      {wrong:"she is have serius problems with walking",right:"She HAS problems with the WALKS."},
+      {wrong:"it isnt't get use to",right:"She IS NOT USED TO them."},
+      {wrong:"they are searching one for her",right:"They are looking for a TRAINER for her."},
+      {wrong:"three time days, twnety minuts for walk",right:"Three TIMES A DAY. A TWENTY-MINUTE WALK."}
+    ],
+    frases:[
+      {en:"My training in the morning was making a walk round the square.",es:"Mi entrenamiento fue dar una vuelta a la manzana."},
+      {en:"She is not used to the walks.",es:"No está acostumbrada a los paseos."},
+      {en:"I'm used to it.",es:"Estoy acostumbrado/a a eso."},
+      {en:"Rita needs a trainer.",es:"Rita necesita un entrenador."},
+      {en:"A twenty-minute walk, three times a day.",es:"Una caminata de 20 minutos, tres veces al día."},
+      {en:"Such is life.",es:"Así es la vida."},
+      {en:"Not yet. Just mate without anything to eat.",es:"Todavía no. Solo mate sin comer nada."},
+      {en:"It is a very quiet place. For that reason, it is boring.",es:"Es un lugar muy tranquilo. Por esa razón, es aburrido."}
+    ]
+  },
+  {
+    id:31, date:"2026-08-03", titulo:"El despido de Notco, resiliencia y vocabulario profesional",
+    vocab:[
+      {en:"warned",pron:"/wɔːrnd/",es:"advirtió / alertó (pasado de warn)"},
+      {en:"fire / fire me",pron:"/faɪər/",es:"despedir / echarme"},
+      {en:"it's in person",pron:"",es:"es presencial"},
+      {en:"proposal",pron:"/prəˈpoʊzəl/",es:"propuesta"},
+      {en:"depending on",pron:"",es:"dependiendo de / depende de"},
+      {en:"negotiate",pron:"/nɪˈɡoʊʃieɪt/",es:"negociar"},
+      {en:"I have it accepted",pron:"",es:"lo tengo aceptado"},
+      {en:"every cloud has a silver lining",pron:"",es:"no hay mal que por bien no venga"},
+      {en:"don't give up",pron:"",es:"no te rindas"},
+      {en:"eventually",pron:"/ɪˈventʃuəli/",es:"eventualmente / con el tiempo"},
+      {en:"thought",pron:"/θɔːt/",es:"pensé / pensado (pasado de think)"},
+      {en:"saw",pron:"/sɔː/",es:"vi / vio (pasado de see)"},
+      {en:"self-confident",pron:"",es:"seguro de sí mismo"},
+      {en:"ending a period / stage",pron:"",es:"terminando una etapa"},
+      {en:"invitation",pron:"/ˌɪnvɪˈteɪʃən/",es:"invitación"}
+    ],
+    gramatica:[
+      {titulo:"EVERY CLOUD HAS A SILVER LINING",
+       formula:"No hay mal que por bien no venga.\n= Every cloud has a silver lining.\n\nOtras expresiones de resiliencia:\nDon't give up! = ¡No te rindas!\nBeing positive is the key for success.\nI feel this moment as ending a period.",
+       ejemplos:["Every cloud has a silver lining — a new opportunity will come.","Don't give up! You are already prepared for what's next.","Being self-confident is the key for success."]},
+      {titulo:"DEPENDING ON — depende de",
+       formula:"It DEPENDS ON the proposal. (NOT 'depend a propous')\nDEPENDING ON the result, I will decide.\n\n⚠ Siempre seguido de ON",
+       ejemplos:["It depends on the proposal.","Depending on the offer, I might accept.","It depends on how they handle the meeting."]}
+    ],
+    correcciones:[
+      {wrong:"i am Good, expenting for morning",right:"I am OK, WAITING for tomorrow morning."},
+      {wrong:"rrhh sending invite",right:"RRHH SENT AN INVITATION."},
+      {wrong:"i think me despiden morning",right:"I think they are going to FIRE ME tomorrow."},
+      {wrong:"i have acepptaded",right:"I HAVE IT ACCEPTED."},
+      {wrong:"is person, in the office 10am",right:"IT'S IN PERSON, at the office at 10am."},
+      {wrong:"my boss ya me advitio",right:"My boss already WARNED ME."},
+      {wrong:"depend a propous",right:"DEPENDING ON THE PROPOSAL."},
+      {wrong:"totaly prepation",right:"I'm totally READY."},
+      {wrong:"i wait that is easy",right:"I HOPE things are gonna be easy and they WON'T WANT TO NEGOTIATE."},
+      {wrong:"i feel the finish stage but i don't sad",right:"I feel this moment as ENDING A PERIOD, and I'm not sad."}
+    ],
+    frases:[
+      {en:"My boss already warned me.",es:"Mi jefe ya me había advertido."},
+      {en:"I think they are going to fire me.",es:"Creo que me van a despedir."},
+      {en:"It's in person, at the office at 10am.",es:"Es presencial, en la oficina a las 10am."},
+      {en:"I have it accepted.",es:"Lo tengo aceptado."},
+      {en:"I feel this moment as ending a period.",es:"Siento este momento como el fin de una etapa."},
+      {en:"Every cloud has a silver lining.",es:"No hay mal que por bien no venga."},
+      {en:"Don't give up!",es:"¡No te rindas!"},
+      {en:"Being positive and self-confident is the key for success.",es:"Ser positivo y seguro de uno mismo es la clave del éxito."},
+      {en:"Depending on the proposal.",es:"Depende de la propuesta."},
+      {en:"I hope things are gonna be easy.",es:"Espero que las cosas sean fáciles."},
+      {en:"Yesterday Rita went back home.",es:"Ayer Rita volvió a su casa."}
+    ]
   }
 ];
 
